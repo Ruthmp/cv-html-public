@@ -7,9 +7,15 @@
     "linkedin": "LinkedIn: ",
     "github": "GitHub: ",
     "website": "Página web: ",
-    "technicalSkillsTitle": "Habilidades Técnicas ",
+    "technicalSkillsTitle": "Habilidades Técnicas (Skills) ",
     "languagesTitle": "Idiomas ",
-    "otherTitle": "Otros "
+    "otherTitle": "Otros ",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "databases": "Base de Datos",
+    "versionControl": "Control de Versiones",
+    "desktop": "Escritorio",
+    "other": "Otras Habilidades"
   },
   "personalData": {
     "firstName": "Ruth",
@@ -97,13 +103,39 @@
     ]
   },
   "technicalSkills": {
-    "title": "Habilidades Técnicas",
-    "frontend": ["HTML5", "CSS3", "JavaScript"],
-    "backend": ["Java", "PHP", "Go"],
-    "databases": ["MySQL con entorno gráfico MySQL Workbench"],
-    "versionControl": ["Git", "GitHub"],
-    "desktop": ["Desarrollo de aplicaciones con Java Swing"],
-    "other": ["Trabajo en equipo", "Comunicación efectiva"]
+    "title": "Habilidades Técnicas (Skills)",
+    "categories": [
+      {
+        "key": "frontend",
+        "name": "Frontend",
+        "skills": ["HTML5", "CSS3", "JavaScript"]
+      },
+      {
+        "key": "backend",
+        "name": "Backend",
+        "skills": ["Java", "PHP", "Go"]
+      },
+      {
+        "key": "databases",
+        "name": "Bases de Datos",
+        "skills": ["MySQL con entorno gráfico MySQL Workbench"]
+      },
+      {
+        "key": "versionControl",
+        "name": "Control de Versiones",
+        "skills": ["Git", "GitHub"]
+      },
+      {
+        "key": "desktop",
+        "name": "Escritorio",
+        "skills": ["Java Swing"]
+      },
+      {
+        "key": "other",
+        "name": "Otras Habilidades",
+        "skills": ["Trabajo en equipo", "Comunicación efectiva"]
+      }
+    ]
   },
   "languages": {
     "title": "Idiomas",
@@ -120,6 +152,10 @@
   },
   "other": {
     "title": "Otros",
-    "items": ["Carné de conducir B", "Disponibilidad para viajar"]
+    "items": [
+      "Carné de conducir B",
+      "Disponibilidad para viajar",
+      "Interés en desarrollo web y nuevas tecnologías"
+    ]
   }
 }
