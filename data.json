@@ -1,0 +1,125 @@
+{
+  "labels": {
+    "birthDate": "Fecha de Nacimiento: ",
+    "location": "Ubicación: ",
+    "phone": "Teléfono: ",
+    "email": "Email: ",
+    "linkedin": "LinkedIn: ",
+    "github": "GitHub: ",
+    "website": "Página web: ",
+    "technicalSkillsTitle": "Habilidades Técnicas ",
+    "languagesTitle": "Idiomas ",
+    "otherTitle": "Otros "
+  },
+  "personalData": {
+    "firstName": "Ruth",
+    "lastName": "Millán Piqueras",
+    "birthDate": "1989-11-15",
+    "location": "Faura, Valencia",
+    "phone": "+34 665 062 613",
+    "email": "ruth.millan.dev@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/ruth-millan-piqueras",
+    "github": "https://github.com/Ruthmp",
+    "website": null
+  },
+  "profile": "Desarrolladora web en formación con experiencia previa en gestión de equipos, logística y atención al cliente. Apasionada por la tecnología y la mejora continua, con formación técnica en desarrollo frontend y backend. Busco aplicar mis habilidades en proyectos reales y seguir creciendo en el ámbito del desarrollo web.",
+  "education": {
+    "title": "Formación Académica",
+    "items": [
+      {
+        "degree": "Técnico Superior en Desarrollo de Aplicaciones Web",
+        "institution": "MEDAC",
+        "startYear": "2023",
+        "endYear": "2025",
+        "description": "Formación completa en desarrollo frontend y backend. Nota media 9,25"
+      },
+      {
+        "degree": "Grado Universitario en Criminología y Seguridad",
+        "institution": "Universidad Jaime I",
+        "startYear": "2008",
+        "endYear": "2013",
+        "description": "Formación superior en criminología, con enfoque en análisis, prevención y gestión de la seguridad."
+      }
+    ]
+  },
+  "experience": {
+    "title": "Experiencia Laboral",
+    "items": [
+      {
+        "position": "Desarrolladora Web (Prácticas)",
+        "company": "Fundación Medac",
+        "location": "España",
+        "startDate": "2025-03",
+        "endDate": "2025-06",
+        "hours": "370",
+        "description": "Desarrollo de una aplicación en Go integrando la API de Google Drive. Funcionalidades implementadas:\n- visualización de archivos y carpetas.\n- Descarga manual o masiva (en ZIP) de archivos y carpetas mediante enlaces.\n- Subida de archivos manual y masiva.\n Trabajo en equipo siguiendo buenas prácticas de control de versiones (Git) y documentación técnica."
+      },
+      {
+        "position": "Gerente A (Logística)",
+        "company": "Mercadona",
+        "location": "Sagunto, Valencia",
+        "startDate": "2024-11",
+        "endDate": "Actual",
+        "description": "Actualmente, preparación de pedidos para tiendas mediante sistema de picking. Organización y montaje de palés con los productos solicitados. Verificación de cantidades y calidad antes del envío. Uso de transpaleta eléctrica. Cumplimiento de tiempos y estándares de calidad en un entorno logístico dinámico."
+      },
+      {
+        "position": "Assistant Manager",
+        "company": "JD Sports",
+        "location": "Sagunto, Valencia",
+        "startDate": "2022-06",
+        "endDate": "2024-11",
+        "description": "Gestión del equipo: planificación de horarios, procesos de contratación, seguimiento del personal y detección de talento. Análisis de cuentas de explotación para garantizar la rentabilidad de la tienda. Coordinación y motivación del equipo para alcanzar los objetivos en los tiempos establecidos. Seguimiento y análisis de KPI’s."
+      },
+      {
+        "position": "Supervisora",
+        "company": "JD Sports",
+        "location": "Castellón, Castellón",
+        "startDate": "2019-09",
+        "endDate": "2022-05",
+        "description": "Responsable de tienda: apertura, cierre y arqueos de caja. Gestión de equipo y atención al cliente. Responsable de la sección de calzado, aplicando técnicas de visual merchandising para potenciar las ventas y asegurar una presentación comercial adecuada. Gestión de incidencias, formación y organización del equipo."
+      },
+      {
+        "position": "Sales Assistant",
+        "company": "JD Sports",
+        "location": "Castellón, Castellón",
+        "startDate": "2017-11",
+        "endDate": "2019-08",
+        "description": "Atención al cliente durante el proceso de venta. Gestión de producto en el sector retail: alarmado, procesado e implantación tanto en tienda como en almacén. Uso de TPV y realización de venta complementaria."
+      },
+      {
+        "position": "Auxiliar restauración moderna",
+        "company": "100 Montaditos",
+        "location": "Castellón, Castellón",
+        "startDate": "2013-10",
+        "endDate": "2017-05",
+        "description": "Atención al cliente, preparación de pedidos, servicio en barra y sala. Apoyo en cocina, reposición y control de stock. Limpieza y mantenimiento del área de trabajo. Trabajo en equipo bajo presión, cumpliendo con los estándares de calidad y tiempos del servicio en restauración moderna."
+      }
+    ]
+  },
+  "technicalSkills": {
+    "title": "Habilidades Técnicas",
+    "frontend": ["HTML5", "CSS3", "JavaScript"],
+    "backend": ["Java", "PHP", "Go"],
+    "databases": ["MySQL con entorno gráfico MySQL Workbench"],
+    "versionControl": ["Git", "GitHub"],
+    "desktop": ["Desarrollo de aplicaciones con Java Swing"],
+    "other": ["Trabajo en equipo", "Comunicación efectiva"]
+  },
+  "languages": {
+    "title": "Idiomas",
+    "items": [
+      {
+        "language": "Español",
+        "level": "Nativo"
+      },
+      {
+        "language": "Inglés",
+        "level": "A2"
+      }
+    ]
+  },
+  "other": {
+    "title": "Otros",
+    "items": ["Carné de conducir B", "Disponibilidad para viajar"]
+  }
+}
