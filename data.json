@@ -58,7 +58,7 @@
         "startDate": "2025-03",
         "endDate": "2025-06",
         "hours": "370",
-        "description": "Desarrollo de una aplicación en Go integrando la API de Google Drive. Funcionalidades implementadas:\n- visualización de archivos y carpetas.\n- Descarga manual o masiva (en ZIP) de archivos y carpetas mediante enlaces.\n- Subida de archivos manual y masiva.\n Trabajo en equipo siguiendo buenas prácticas de control de versiones (Git) y documentación técnica."
+        "description": "Desarrollo de una aplicación en Go integrando la API de Google Drive. Funcionalidades implementadas: visualización de archivos y carpetas. Descarga manual o masiva (en ZIP) de archivos y carpetas mediante enlaces. Subida de archivos manual y masiva. Trabajo en equipo siguiendo buenas prácticas de control de versiones (Git) y documentación técnica."
       },
       {
         "position": "Gerente A (Logística)",

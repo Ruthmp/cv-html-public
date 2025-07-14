@@ -19,13 +19,17 @@ function displayProfile(profile){
 //? Functions to Contact Information
 //* Create Contact Information
 function getContactInformation(personalData){
-    return `Email: ${personalData.email} | LinkedIn: ${personalData.linkedin} | GitHub: ${personalData.github}`;
+    return `
+    <a class="contact-item" href ="mailto: ${personalData.email}"> ✉️ ${personalData.email}</a> |
+    <a class="contact-item" href="${personalData.linkedin}" target="_blank" title=${personalData.linkedin} rel= "noopener noreferrer"> LinKedIn</a> |
+    <a class="contact-item" href=" target="_blank" title=${personalData.github} rel= "noopener noreferrer"> GitHub</a>
+`;
 }
 
 //* Render Contact Information
 function renderContactInformation(contactInfo){
     const contactInfoElement =  document.getElementById('contact-info');
-    if (contactInfoElement) contactInfoElement.textContent = contactInfo;
+    if (contactInfoElement) contactInfoElement.innerHTML = contactInfo;
 }
 
 function displayLabelAndValue (labelId, valueId, labelText, valueText){
@@ -122,7 +126,7 @@ async function loadCV() {
         //* Display Contact Information
         const contactInfo = getContactInformation(data.personalData);
         renderContactInformation(contactInfo);
-        
+        /*
         //* Display birth date
         displayLabelAndValue(
             'label-birthDate',
@@ -137,7 +141,7 @@ async function loadCV() {
             'location',
             labels.location,
             data.personalData.location
-        )
+        )*/
 
         //* Display Education
         displayEducation(data.education)
