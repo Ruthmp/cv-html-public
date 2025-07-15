@@ -20,10 +20,10 @@ function displayProfile(profile){
 //* Create Contact Information
 function getContactInformation(personalData){
     return `
-    <a class="contact-item" href ="mailto: ${personalData.email}"> ✉️ ${personalData.email}</a> |
-    <a class="contact-item" href="${personalData.linkedin}" target="_blank" title=${personalData.linkedin} rel= "noopener noreferrer"> LinKedIn</a> |
-    <a class="contact-item" href=" target="_blank" title=${personalData.github} rel= "noopener noreferrer"> GitHub</a>
-`;
+    <a class="contact-item" href ="mailto:${personalData.email}"> ✉️ ${personalData.email}</a> |
+    <a class="contact-item" href="${personalData.linkedin}" target="_blank" title="${personalData.linkedin}" rel= "noopener noreferrer"> LinKedIn</a> |
+   <a class="contact-item" href="${personalData.github}" target="_blank" title="${personalData.github}" rel="noopener noreferrer"> GitHub</a>`
+;
 }
 
 //* Render Contact Information

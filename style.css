@@ -34,7 +34,7 @@
   }
 /* Set a background color and font for the body */
 body {
-  background-color: #f4f4f4;
+  background-color: #f0f4f8;
   font-family: Arial, sans-serif;
   font-size: 16px;
   color: #333;
@@ -103,6 +103,14 @@ header {
     padding: 20px 0;
     text-align: center;
 }
+header div{
+  margin: 4%;
+}
+h1{
+  font-family: "dancing script", cursive, Arial, sans-serif;;
+  font-weight: bold;
+  font-size: 5rem;
+}
 .contact-item{
     text-align: center;
     margin: 0 20px;
@@ -128,4 +136,10 @@ p{
 section{
     margin-top: 40px;
     margin-bottom:40px;
+    scroll-margin-top: 60px;
+}
+footer{
+  background-color:  #35424a;
+   color: #ffffff;
+    padding: 20px 0;
 }
