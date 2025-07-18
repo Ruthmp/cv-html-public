@@ -7,7 +7,8 @@
     "linkedin": "LinkedIn: ",
     "github": "GitHub: ",
     "website": "Página web: ",
-    "technicalSkillsTitle": "Habilidades Técnicas (Skills) ",
+    "education":"Formación",
+    "technicalSkillsTitle": "Habilidades",
     "languagesTitle": "Idiomas ",
     "otherTitle": "Otros ",
     "frontend": "Frontend",
@@ -15,7 +16,8 @@
     "databases": "Base de Datos",
     "versionControl": "Control de Versiones",
     "desktop": "Escritorio",
-    "other": "Otras Habilidades"
+    "other": "Otros",
+    "experience":"Experiencia"
   },
   "personalData": {
     "firstName": "Ruth",

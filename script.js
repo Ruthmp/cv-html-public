@@ -39,6 +39,24 @@ function displayLabelAndValue (labelId, valueId, labelText, valueText){
     if(labelElement) labelElement.textContent= labelText;
     if(valueElement) valueElement.textContent = valueText;
 }
+//? Function to dinamic menu.
+function displayNavbar(data){
+    const navbar = document.getElementById('navbar');
+    if(!navbar) return;
+    const sections=[
+        {id: 'education', title: data.labels.education},
+        {id:'experience', title: data.labels.experience},
+        {id:'technicalSkills', title: data.labels.technicalSkillsTitle},
+        {id:'languages', title: data.labels.languagesTitle},
+        {id:'other', title: data.labels.other}
+    ]
+    sections.forEach(section=>{
+        const link= document.createElement('a');
+        link.href= `#${section.id}`;
+        link.textContent = section.title;
+        navbar.appendChild(link);
+    })
+}
 
 function displayEducation(education){
     const educationSection = document.getElementById('education');
@@ -127,6 +145,7 @@ async function loadCV() {
         //* Display Contact Information
         const contactInfo = getContactInformation(data.personalData);
         renderContactInformation(contactInfo);
+        displayNavbar(data);
         /*
         //* Display birth date
         displayLabelAndValue(
