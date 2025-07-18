@@ -46,7 +46,8 @@ function displayEducation(education){
         let educationHTML = `<h2>${education.title}</h2>`;
         educationHTML += '<ul>';
         education.items.forEach(edu =>{
-            educationHTML += `<li><strong>${edu.degree}</strong> - ${edu.institution} (${edu.startYear} - ${edu.endYear})<br>${edu.description}</li>`;
+            educationHTML += `<li><strong>${edu.degree}</strong> - <span class="highlight-role">
+${edu.institution}</span><span class="date-location"> (${edu.startYear} - ${edu.endYear})</span><br>${edu.description}</li>`;
         })
         educationHTML += '</ul>';
         educationSection.innerHTML = educationHTML;
@@ -58,7 +59,7 @@ function displayExperience(experience){
         let experienceHTML = `<h2>${experience.title}</h2>`;
         experienceHTML += '<ul>';
         experience.items.forEach(exp =>{
-            experienceHTML+= `<li><strong>${exp.position}</strong> <br> ${exp.company} (${exp.startDate} &ndash; ${exp.endDate}) | ${exp.location}<br>${exp.description}</li>`;
+            experienceHTML+= `<li><strong>${exp.position}</strong> <br><span class="highlight-role"> ${exp.company} </span><span class="date-location">(${exp.startDate} &ndash; ${exp.endDate}) | ${exp.location}</span><br>${exp.description}</li>`;
         })
         experienceHTML += '</ul>';
         experienceSection.innerHTML = experienceHTML;

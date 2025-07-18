@@ -9,7 +9,7 @@
     display: flex;
     justify-content: center;
     gap: 20px;
-    background-color: #eaeaea;
+    background-color: #ff8a75;
     padding: 10px;
     border-bottom: 1px solid #ccc;
     position: sticky;
@@ -19,29 +19,55 @@
   
   #navbar a {
     text-decoration: none;
-    color: #333;
+    color: #ffffff;
     font-weight: bold;
     transition: color 0.3s;
   }
   
   #navbar a:hover {
-    color: #0073b1; /* Azul LinkedIn o tu color principal */
+    color: #e85b4d;
     text-decoration: underline;
+  }
+  /* Media query to small screens*/
+@media(max-width: 600px) {
+    #navbar {
+      gap: 5px;
+      padding: 8px;
+    }
+    #navbar a {
+      font-size: 14px;
+    }
   }
   
   html {
-    scroll-behavior: smooth; /* Habilita el desplazamiento suave */
+    scroll-behavior: smooth; 
   }
 /* Set a background color and font for the body */
 body {
-  background-color: #f0f4f8;
+  background-color: #fff6f0;
   font-family:"Poppins", "Segoe UI", sans-serif;
   font-size: 1rem;
-  color: #333;
+  color: #4a4a4a;
   line-height: 1.6;
   text-align: justify;
 }
 /* Style the main container */
+.highlight-role{
+  font-weight:500;
+  color: #f2b134;
+  font-style: italic;
+}
+.date-location{
+  font-size: 0.9rem;
+  color:#777;
+  font-style: italic;
+  margin-bottom: 0.3rem;
+}
+h2{
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #e03e2f;
+}
 #cv-container {
   width: 80%;
   margin: auto;
@@ -71,34 +97,51 @@ body {
 }
 #extra-sections{
     display: flex;
-  justify-content: center;     /* Centra horizontalmente */
-  gap: 30px;                   /* Espacio entre los bloques */
-  flex-wrap: nowrap;             /* Para que se ajusten en pantallas pequeñas */
-  margin-top: 40px;
+  justify-content: center;    
+  gap: clamp(1rem, 3vw, 2rem);                  
+  flex-wrap: wrap;             
+  margin: 40px auto 0 auto;
   padding: 20px;
   overflow-x: auto;
-  max-width: 1000px;      /* Limita el ancho máximo del contenedor */
+  max-width: 1128px;     
   margin-left: auto;
   margin-right: auto; 
+  box-sizing: border-box;
+  scroll-snap-type: x mandatory;
 }
+
 #extra-sections section {
-    background-color: #f9f9f9;
+    background-color: #fff6f0;
     padding: 20px;
     border-radius: 12px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    flex: 1 1 300px;
     max-width: 360px;
+    min-width: 280px;
     width: 100%;
     box-sizing: border-box;
     text-align: center;
+
+    scroll-snap-align: start;     
+    transition: transform 0.3s ease;
   }
+ 
+#extra-sections section:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
   #extra-sections ul {
     list-style-type: none;
     padding-left: 0;
     margin: 0;
   }
+  strong{
+    font-weight: 700;
+  }
+  
 /* Style the header */
 header {
-    background: #35424a;
+    background: #ff6f61;
     color: #ffffff;
     padding: 20px 0;
     text-align: center;
@@ -139,7 +182,7 @@ section{
     scroll-margin-top: 60px;
 }
 footer{
-  background-color:  #35424a;
-   color: #ffffff;
+  background-color:  #ff6f61;
+    color: #ffffff;
     padding: 20px 0;
 }
