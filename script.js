@@ -20,17 +20,22 @@ function displayProfile(profile){
 //* Create Contact Information
 function getContactInformation(personalData){
     return `
-    <a class="contact-item" href ="mailto:${personalData.email}"> ✉️ ${personalData.email}</a> |
-    <a class="contact-item" href="${personalData.linkedin}" target="_blank" title="${personalData.linkedin}" rel= "noopener noreferrer"> LinKedIn</a> |
-   <a class="contact-item" href="${personalData.github}" target="_blank" title="${personalData.github}" rel="noopener noreferrer"> GitHub</a>`
+    <a class="contact-item" href ="mailto:${personalData.email}" title="${personalData.email}"><i class="fas fa-envelope"></i></a> 
+    <a class="contact-item" href="${personalData.linkedin}" target="_blank" title="${personalData.linkedin}" rel= "noopener noreferrer"><i class="fab fa-linkedin"></i></a> 
+   <a class="contact-item" href="${personalData.github}" target="_blank" title="${personalData.github}" rel="noopener noreferrer"><i class="fab fa-github"></a>`
+   
 ;
 }
 
 //* Render Contact Information
-function renderContactInformation(contactInfo){
-    const contactInfoElement =  document.getElementById('contact-info');
-    if (contactInfoElement) contactInfoElement.innerHTML = contactInfo;
-}
+function renderContactInformation(contactInfo) {
+    const ids = ['contact-info', 'footer-contact-info'];
+  
+    ids.forEach(id => {
+      const element = document.getElementById(id);
+      if (element) element.innerHTML = contactInfo;
+    });
+  }
 
 function displayLabelAndValue (labelId, valueId, labelText, valueText){
     const labelElement = document.getElementById(labelId);
@@ -72,29 +77,85 @@ ${edu.institution}</span><span class="date-location"> (${edu.startYear} - ${edu.
 }
 
 function displayExperience(experience){
-    const experienceSection = document.getElementById('experience');
-    if(!experienceSection) return;
-        let experienceHTML = `<h2>${experience.title}</h2>`;
-        experienceHTML += '<ul>';
-        experience.items.forEach(exp =>{
-            experienceHTML+= `<li><strong>${exp.position}</strong> <br><span class="highlight-role"> ${exp.company} </span><span class="date-location">(${exp.startDate} &ndash; ${exp.endDate}) | ${exp.location}</span><br>${exp.description}</li>`;
-        })
-        experienceHTML += '</ul>';
-        experienceSection.innerHTML = experienceHTML;
+    const experienceSection = document.getElementById("experience");
+    if (!experienceSection) return;
+    console.log("✅ Datos de experiencia recibidos:", experience);
+    let experienceHTML = `<h2>${experience.title}</h2><div class="timeline">`;
+
+    experience.items.forEach((exp, index) => {
+        console.log("🧱 Item:", exp);
+        const side = index % 2 === 0 ? "left" : "right";
+        experienceHTML += `
+            <div class ="timeline-item ${side}">
+            <div class ="timeline-content">
+            <h3 class ="position">${exp.icon || " "} ${exp.position}</h3>
+            <p class="location"><span  class="highlight-role"> ${exp.company}</span> | ${exp.location}</p>
+            <p class ="date">(${exp.startDate} – ${exp.endDate})</p>
+            <p class="description">${exp.description}</p>
+            </div>
+            </div>
+            `;
+    });
+    experienceHTML += "</div>";
+    experienceSection.innerHTML = experienceHTML;
+
+  // Accordion
+const items = document.querySelectorAll('.timeline-item');
+items.forEach(item => {
+    item.addEventListener('click', () => {
+    item.classList.toggle('open');
+        });
+    });
 }
-function displaySkills(technicalSkills){
+function activarScrollReveal() {
+    const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+          observer.unobserve(entry.target); // solo una vez
+        }
+    });
+    }, {
+    threshold: 0.2
+    });
+
+    const items = document.querySelectorAll('.timeline-item');
+    items.forEach(item => observer.observe(item));
+}
+
+
+
+
+
+function displaySkills(technicalSkills) {
     const skillsSection = document.getElementById('technicalSkills');
-    if(!skillsSection) return;
-        let skillsHTML = `<h2>${technicalSkills.title}</h2>`;
-        technicalSkills.categories.forEach(category =>{
-            skillsHTML+=`<h3>${category.name}</h3><ul>`;
-            category.skills.forEach(skill=>{
-                skillsHTML+=`<li>${skill}</li>`;
-            });
-            skillsHTML+=`</ul>`;
-        })
-        skillsSection.innerHTML = skillsHTML;
+    if (!skillsSection) return;
+
+    let skillsHTML = `<h2>${technicalSkills.title}</h2>`;
+
+    technicalSkills.categories.forEach(category => {
+    skillsHTML += `<h3>${category.name}</h3><ul class="skills-list" style="list-style:none; padding:0; display:flex; flex-wrap:wrap; gap:15px;">`;
+
+    category.skills.forEach(skill => {
+        skillsHTML += `
+        <li class="skill-item">
+        <i class="${skill.iconClass}"></i>
+        <span>${skill.name}</span>
+        </li>
+        `;
+    });
+
+    skillsHTML += `</ul>`;
+
+    if (category.extra) {
+        skillsHTML += `<p style="font-style: italic; font-size: 13px; margin-left: 10px; color: #555;">${category.extra}</p>`;
+    }
+    });
+
+    skillsSection.innerHTML = skillsHTML;
 }
+
+
 
 function displayLanguages(languages){
     const languagesSection = document.getElementById('languages');
@@ -168,6 +229,7 @@ async function loadCV() {
 
         //* Display Work Experience
         displayExperience(data.experience)
+        activarScrollReveal();
 
         //* Display Skills
         displaySkills(data.technicalSkills)

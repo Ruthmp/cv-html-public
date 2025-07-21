@@ -54,6 +54,7 @@
     "title": "Experiencia Laboral",
     "items": [
       {
+        "icon": "💻",
         "position": "Desarrolladora Web (Prácticas)",
         "company": "Fundación Medac",
         "location": "España",
@@ -63,6 +64,7 @@
         "description": "Desarrollo de una aplicación en Go integrando la API de Google Drive. Funcionalidades implementadas: visualización de archivos y carpetas. Descarga manual o masiva (en ZIP) de archivos y carpetas mediante enlaces. Subida de archivos manual y masiva. Trabajo en equipo siguiendo buenas prácticas de control de versiones (Git) y documentación técnica."
       },
       {
+        "icon": "🚛",
         "position": "Gerente A (Logística)",
         "company": "Mercadona",
         "location": "Sagunto, Valencia",
@@ -71,6 +73,7 @@
         "description": "Actualmente, preparación de pedidos para tiendas mediante sistema de picking. Organización y montaje de palés con los productos solicitados. Verificación de cantidades y calidad antes del envío. Uso de transpaleta eléctrica. Cumplimiento de tiempos y estándares de calidad en un entorno logístico dinámico."
       },
       {
+        "icon": "👥",
         "position": "Assistant Manager",
         "company": "JD Sports",
         "location": "Sagunto, Valencia",
@@ -79,6 +82,7 @@
         "description": "Gestión del equipo: planificación de horarios, procesos de contratación, seguimiento del personal y detección de talento. Análisis de cuentas de explotación para garantizar la rentabilidad de la tienda. Coordinación y motivación del equipo para alcanzar los objetivos en los tiempos establecidos. Seguimiento y análisis de KPI’s."
       },
       {
+        "icon": "👩‍💼",
         "position": "Supervisora",
         "company": "JD Sports",
         "location": "Castellón, Castellón",
@@ -87,6 +91,7 @@
         "description": "Responsable de tienda: apertura, cierre y arqueos de caja. Gestión de equipo y atención al cliente. Responsable de la sección de calzado, aplicando técnicas de visual merchandising para potenciar las ventas y asegurar una presentación comercial adecuada. Gestión de incidencias, formación y organización del equipo."
       },
       {
+        "icon": "🛍️",
         "position": "Sales Assistant",
         "company": "JD Sports",
         "location": "Castellón, Castellón",
@@ -95,6 +100,7 @@
         "description": "Atención al cliente durante el proceso de venta. Gestión de producto en el sector retail: alarmado, procesado e implantación tanto en tienda como en almacén. Uso de TPV y realización de venta complementaria."
       },
       {
+        "icon": "🍽️",
         "position": "Auxiliar restauración moderna",
         "company": "100 Montaditos",
         "location": "Castellón, Castellón",
@@ -110,32 +116,42 @@
       {
         "key": "frontend",
         "name": "Frontend",
-        "skills": ["HTML5", "CSS3", "JavaScript"]
+        "skills": [
+          {"name": "HTML5", "iconClass": "devicon-html5-plain colored"},
+          {"name": "CSS3", "iconClass": "devicon-css3-plain colored"},
+          {"name": "JavaScript", "iconClass": "devicon-javascript-plain colored"}
+        ]
       },
       {
         "key": "backend",
         "name": "Backend",
-        "skills": ["Java", "PHP", "Go"]
+        "skills": [
+          {"name": "Java", "iconClass": "devicon-java-plain colored"},
+          {"name": "PHP", "iconClass": "devicon-php-plain colored"},
+          {"name": "Go", "iconClass": "devicon-go-plain colored"}
+        ]
       },
       {
         "key": "databases",
         "name": "Bases de Datos",
-        "skills": ["MySQL con entorno gráfico MySQL Workbench"]
+        "skills": [
+          {"name": "MySQL", "iconClass": "devicon-mysql-plain colored"}
+        ]
       },
       {
         "key": "versionControl",
         "name": "Control de Versiones",
-        "skills": ["Git", "GitHub"]
+        "skills": [
+          {"name": "Git", "iconClass": "devicon-git-plain colored"},
+          {"name": "GitHub", "iconClass": "devicon-github-original colored"}
+        ]
       },
       {
         "key": "desktop",
         "name": "Escritorio",
-        "skills": ["Java Swing"]
-      },
-      {
-        "key": "other",
-        "name": "Otras Habilidades",
-        "skills": ["Trabajo en equipo", "Comunicación efectiva"]
+        "skills": [
+          {"name": "Java Swing", "iconClass": "devicon-java-plain colored"}
+        ]
       }
     ]
   },
@@ -156,6 +172,8 @@
     "title": "Otros",
     "items": [
       "Carné de conducir B",
+      "Trabajo en equipo",
+      "Comunicación efectiva",
       "Disponibilidad para viajar",
       "Interés en desarrollo web y nuevas tecnologías"
     ]
