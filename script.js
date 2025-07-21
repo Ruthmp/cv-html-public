@@ -70,7 +70,7 @@ function displayEducation(education){
         educationHTML += '<ul>';
         education.items.forEach(edu =>{
             educationHTML += `<li><strong>${edu.degree}</strong> - <span class="highlight-role">
-${edu.institution}</span><span class="date-location"> (${edu.startYear} - ${edu.endYear})</span><br>${edu.description}</li>`;
+${edu.institution}</span><span class="date"> (${edu.startYear} - ${edu.endYear})</span><br>${edu.description}</li>`;
         })
         educationHTML += '</ul>';
         educationSection.innerHTML = educationHTML;
