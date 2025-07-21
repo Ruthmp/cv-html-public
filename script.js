@@ -11,10 +11,31 @@ function renderFullName(fullName) {
     const fullNameEl = document.getElementById('full-name');
     if (fullNameEl) fullNameEl.textContent = fullName;
 }
+function displaytagline(tagline){
+    const taglineElement = document.getElementById('tagline');
+    if (!taglineElement) return;
+    taglineElement.innerHTML= `<h3><span id="text"></span><span id="cursor">|</span></h3>`;
+    const textSpan = document.getElementById('text');
+    const cursorSpan = document.getElementById('cursor');
+    let i= 0;
+    function typeWriter(){
+        if(i<=tagline.length){
+            textSpan.textContent = tagline.substring(0, i);
+            i++;
+            setTimeout(typeWriter, 100);
+    } else{
+        cursorSpan.style.animation = 'blink 1s step-start infinite';
+    }
+    }
+    typeWriter();
+}
 
-function displayProfile(profile){
-    const profileElement = document.getElementById('profile');
-    if (profileElement) profileElement.textContent = profile;
+function displayProfile(profile, title){
+    const profileSection = document.getElementById('profile');
+    if (!profileSection) return;
+   let profileHTML = `<h2>${title}</h2>`;
+   profileHTML +=`<p>${profile}</p>`;
+   profileSection.innerHTML = profileHTML;
 }
 //? Functions to Contact Information
 //* Create Contact Information
@@ -22,7 +43,7 @@ function getContactInformation(personalData){
     return `
     <a class="contact-item" href ="mailto:${personalData.email}" title="${personalData.email}"><i class="fas fa-envelope"></i></a> 
     <a class="contact-item" href="${personalData.linkedin}" target="_blank" title="${personalData.linkedin}" rel= "noopener noreferrer"><i class="fab fa-linkedin"></i></a> 
-   <a class="contact-item" href="${personalData.github}" target="_blank" title="${personalData.github}" rel="noopener noreferrer"><i class="fab fa-github"></a>`
+   <a class="contact-item" href="${personalData.github}" target="_blank" title="${personalData.github}" rel="noopener noreferrer"><i class="fab fa-github"></i></a>`
    
 ;
 }
@@ -49,16 +70,18 @@ function displayNavbar(data){
     const navbar = document.getElementById('navbar');
     if(!navbar) return;
     const sections=[
-        {id: 'education', title: data.labels.education},
-        {id:'experience', title: data.labels.experience},
-        {id:'technicalSkills', title: data.labels.technicalSkillsTitle},
-        {id:'languages', title: data.labels.languagesTitle},
-        {id:'other', title: data.labels.other}
+        {id: 'profile', icon: 'fas fa-user', title: data.labels.profile},
+        {id: 'education', icon: 'fas fa-graduation-cap', title: data.labels.education},
+        {id:'experience', icon: 'fas fa-briefcase', title: data.labels.experience},
+        {id:'technicalSkills', icon: 'fas fa-code',title: data.labels.technicalSkillsTitle},
+        {id:'languages', icon: 'fas fa-language', title: data.labels.languagesTitle},
+        {id:'other', icon: 'fas fa-circle-plus', title: data.labels.other}
     ]
     sections.forEach(section=>{
         const link= document.createElement('a');
         link.href= `#${section.id}`;
-        link.textContent = section.title;
+        link.innerHTML =`<i class ="${section.icon}"></i> `;
+        link.title = section.title;
         navbar.appendChild(link);
     })
 }
@@ -180,6 +203,23 @@ function displayOthers(other){
         otherHTML+=`</ul>`;
         otherSection.innerHTML = otherHTML;
 }
+
+function activarFadeIn() {
+    const fadeItems = document.querySelectorAll('.fade-in');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+        if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+          observer.unobserve(entry.target); // solo una vez
+        }
+    });
+    }, {
+        threshold: 0.2
+    });
+
+    fadeItems.forEach(item => observer.observe(item));
+}
 // Load json and display it in the HTML
 /**
  *  Load CV data from JSON file and display it in the HTML
@@ -199,9 +239,11 @@ async function loadCV() {
         const fullName = getFullName(data.personalData);
         renderFullName(fullName);
 
+        //* Display Tagline
+        displaytagline(data.tagline);
     
         //* Display Profile
-        displayProfile(data.profile);
+        displayProfile(data.profile, labels.profile);
         
         //* Display Contact Information
         const contactInfo = getContactInformation(data.personalData);
@@ -239,6 +281,8 @@ async function loadCV() {
 
         //* Display other
         displayOthers(data.other)
+
+        activarFadeIn()
 
     } catch (error){
         console.error('Error loading JSON:', error);

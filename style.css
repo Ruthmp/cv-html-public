@@ -5,16 +5,30 @@
   padding: 0;
   box-sizing: border-box;
 }
+:root {
+  --main-color: #5ec9b3;         /* Main color */
+  --main-color-light: #dff6f0;  /* Very light (hover, backgrounds) */
+  --main-color-dark: #348c74;    /* for borders & accents */
+  --main-color-open-bg: #b2e5d4 ;   /* background for open state */
+  --accent-color: #ff6f61;        /* Accent color for highlights */
+  --background-light: #cce7e1;     /* General light background */
+  --main-text-color: #2f3e3f;       /* Standard dark text */
+  
+}
 #navbar {
     display: flex;
+    border-radius: 10px;
     justify-content: center;
-    gap: 1.25rem;
-    background-color: #ff8a75;
-    padding: 0.625rem;
+    gap: 2rem;
+    background-color: var(--main-color);
+    padding:  0.5rem 1rem;
     border-bottom:0.0625rem solid #ccc;
     position: sticky;
     top: 0;
     z-index: 1000;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
   }
   
   #navbar a {
@@ -25,14 +39,14 @@
   }
   
   #navbar a:hover {
-    color: #e85b4d;
+    color:var(--main-color-dark);
     text-decoration: underline;
     
   }
   /* Media query to small screens*/
 @media(max-width: 600px) {
     #navbar {
-      gap: 0.3125rem;
+      gap: 1.5rem;
       padding:0.5rem;
     }
     #navbar a {
@@ -45,17 +59,17 @@
   }
 /* Set a background color and font for the body */
 body {
-  background-color: #fff6f0;
-  font-family:"Poppins", "Segoe UI", sans-serif;
+  background-color: var(--background-light);
+  font-family:'Exo 2', sans-serif;
   font-size: 1rem;
-  color: #4a4a4a;
+  color: var(--main-text-color);;
   line-height: 1.6;
   text-align: justify;
 }
 /* Style the main container */
 .highlight-role{
   font-weight:500;
-  color: #f2b134;
+  color:var(--accent-color);
   font-style: italic;
 }
  .date{
@@ -67,7 +81,7 @@ body {
 h2{
   font-size: 2rem;
   margin-bottom: 1.25rem;
-  color: #e03e2f;
+  color: var(--main-color);;
 }
 #cv-container {
   width: 80%;
@@ -85,7 +99,7 @@ h2{
 #education li{
     list-style-type: none;
     margin: 0.9375rem;
-  border-bottom:0.125rem solid #333;
+  border-bottom:0.125rem solid var(--main-text-color);
   padding-bottom: 1.875rem;
 }
 
@@ -104,7 +118,7 @@ h2{
   align-items: center;
   width: 5rem;
   font-size: 0.875rem;
-  color: #333;
+  color:var(--main-text-color);
 }
 
 .skill-item i {
@@ -126,7 +140,7 @@ h2{
 }
 
 #extra-sections section {
-    background-color: #fff6f0;
+    background-color: var(--background-light);
     padding: 1.25rem;
     border-radius: 0.75rem;
     box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.12);
@@ -156,62 +170,98 @@ h2{
   
 /* Style the header */
 header {
-    background: #ff6f61;
-   /* background-image: url('../img/image.jpg');*/
+    background:var(--background-light);
+   /*background-image: url('../img/image.jpg');*/
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    color: #ffffff;
+    color: var(--main-text-color);
     padding: 1.25rem 0;
     text-align: center;
 }
 header div{
   margin: 4%;
 }
-.header-foto{
-  width: 100%;
-  height: 15.625rem;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #ffffff;
-  position:absolute;
-  bottom: -3.75rem; 
-  left:50%;
-  transform: translateX(-50%);
-  background-color: #ff6f61;
-}
 .perfil-contenedor {
   display: flex;
   align-items: center;
-  gap: 1.25rem; /* Espacio entre imagen y nombre */
+  gap: 3rem; 
   padding: 1rem 2rem;
   border-radius: 1rem;
 }
 .foto-perfil{
-  width: 10rem;
-  height: 10rem;
-  border-radius: 50%;
-  border: 3px solid #ffffff;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 20%;
+  border: 3px solid var(--main-color);
   object-fit: cover;
   margin-right: 1.25rem;
 }
 h1{
-  font-family: "dancing script", cursive, Arial, sans-serif;;
+  color: var(--main-color);
+  font-family: 'Press Start 2P', cursive;
   font-weight: bold;
-  font-size: 5rem;
+  font-size: 3.5rem;
+  text-align: center;
+  
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  50.01%, 100% { opacity: 0; }
+}
+
+#cursor {
+  font-weight: bold;
+  color: var(--main-color);
+  animation: none;
+}
+/* Para pantallas medianas */
+@media (max-width: 900px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+}
+/* Pantallas pequeñas (móviles) */
+@media (max-width: 480px) {
+  /* Contenedor padre que tiene la foto y el h1 */
+  .perfil-contenedor {
+    display: flex;
+    flex-direction: column; /* apilar verticalmente */
+    align-items: center;
+    justify-content: center;
+  }
+
+  .foto-perfil {
+    width: 10rem;
+    height: 10rem;
+    margin-right: 0;
+    margin-bottom: 1rem; /* separación vertical */
+  }
+
+  h1 {
+    font-size: 2rem;
+    max-width: 90vw;
+  }
 }
 #contact-info {
+  position: fixed;
+  top: 50%;
+  left: 0;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  gap: clamp(0.5rem, 2vw, 1rem);
-  flex-wrap: wrap;
-  margin-bottom: 1rem;
-  margin-left: 2rem;
+  gap: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0 1rem 1rem 0;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
 }
 
 #contact-info i {
   font-size: 1.5rem;
-  color: #ffffff;
+  color: var(--main-color);
   transition: transform 0.2s ease;
 }
 
@@ -224,6 +274,7 @@ a{
 }
 p{
     margin: 4%;
+    color: var(--main-text-color)
 }
 .label{
     font-weight: bold;
@@ -236,15 +287,24 @@ p{
     margin-left: 10%;
     margin-right: 10%;
 }
+#tagline, #profile {
+  background: rgba(94, 201, 179, 0.4);
+  backdrop-filter: blur(10px); 
+  -webkit-backdrop-filter: blur(10px); /* To Safari */
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+}
 section{
     margin-top: 2.5rem;
     margin-bottom:2.5rem;
     scroll-margin-top:3.75rem;
 }
 footer{
-  background-color:  #ff6f61;
-    color: #ffffff;
-    padding: 1.25rem 0;
+  background-color: var(--background-light);
+    color:var(--main-color);
+    padding: 0.5rem 0;
 }
 #footer-contact-info {
   display: flex;
@@ -257,12 +317,13 @@ footer{
 
 #footer-contact-info i {
   font-size: 1.5rem;
-  color: #ffffff;
+  color:var(--main-color);
   transition: transform 0.2s ease;
 }
 
 #footer-contact-info i:hover {
   transform: scale(1.2);
+  color: var(--main-color-dark)
 }
 .timeline {
   position: relative;
@@ -279,7 +340,7 @@ footer{
   transform: translateX(-50%);
   width: 4px;
   height: 100%;
-  background-color: #ff8a75;
+  background-color: var(--main-color);
   border-radius: 2px;
 }
 .timeline-item {
@@ -296,22 +357,22 @@ footer{
   border-right: 4px solid transparent;
 }
 .timeline-item.left:hover {
-  border-left: 4px solid #ff8a75;
-  background-color: #fff5f2;
+  border-left: 4px solid var(--main-color);
+  background-color: var(--main-color-light);
 }
 
 .timeline-item.left.open {
-  border-left: 4px solid #ff8a75;
-  background-color: #fff1eb;
+  border-left: 4px solid var(--main-color);
+  background-color:var(--main-color-open-bg);
 }
 .timeline-item.right:hover {
-  border-right: 4px solid #ff8a75;
-  background-color: #fff5f2;
+  border-right: 4px solid var(--main-color);
+  background-color:var(--main-color-light);
 }
 
 .timeline-item.right.open {
-  border-right: 4px solid #ff8a75;
-  background-color: #fff1eb;
+  border-right: 4px solid var(--main-color);
+  background-color:var(--main-color-open-bg);
 }
 .timeline-item.visible {
   opacity: 1;
@@ -331,10 +392,10 @@ footer{
   content: '';
   position: absolute;
   top: 1.5rem;
-  width: 16px;
-  height: 16px;
-  background-color: white;
-  border: 4px solid #ff8a75;
+  width: 12px;
+  height: 12px;
+  background-color: var(--main-color);
+  border: 4px solid var(--main-color);
   border-radius: 50%;
   z-index: 1;
 }
@@ -348,7 +409,7 @@ footer{
 .position {
   font-weight: 700;
   font-size: 1.2rem;
-  color: #ff6f61  ;
+  color:var(--main-color)  ;
   margin-bottom: 0.3rem;
 }
 .company-location {
@@ -392,13 +453,23 @@ footer{
   }
   .timeline-item.right:hover,.timeline-item.left:hover {
     border-left: none;
-    border-right: 4px solid #ff8a75;
-    background-color: #fff5f2;
+    border-right: 4px solid var(--main-color);
+    background-color: var(--main-color-light);
   }
   
   .timeline-item.right.open, timeline-item.left.open {
     border-left: none;
-    border-right: 4px solid #ff8a75;
-    background-color: #fff1eb;
+    border-right: 4px solid var(--main-color);
+    background-color: #b2fefa;
   }
+}
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px); /* aparece desde un poco abajo */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
 }

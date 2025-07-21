@@ -17,7 +17,8 @@
     "versionControl": "Control de Versiones",
     "desktop": "Escritorio",
     "other": "Otros",
-    "experience":"Experiencia"
+    "experience":"Experiencia",
+    "profile": "Perfil Profesional"
   },
   "personalData": {
     "firstName": "Ruth",
@@ -30,7 +31,8 @@
     "github": "https://github.com/Ruthmp",
     "website": null
   },
-  "profile": "Desarrolladora web en formación con experiencia previa en gestión de equipos, logística y atención al cliente. Apasionada por la tecnología y la mejora continua, con formación técnica en desarrollo frontend y backend. Busco aplicar mis habilidades en proyectos reales y seguir creciendo en el ámbito del desarrollo web.",
+  "tagline": "👩‍💻 Desarrolladora web en formación.",
+  "profile": "Me estoy formando como desarrolladora web y cuento con experiencia previa liderando equipos, trabajando en logística y atención al cliente. Me apasiona la tecnología y aprender cosas nuevas cada día. Actualmente estoy enfocada en mejorar mis habilidades en HTML, CSS y JavaScript, con el objetivo de crecer como desarrolladora frontend y aportar valor en proyectos reales.",
   "education": {
     "title": "Formación Académica",
     "items": [
