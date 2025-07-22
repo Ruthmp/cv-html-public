@@ -11,9 +11,21 @@
   --main-color-dark: #348c74;    /* for borders & accents */
   --main-color-open-bg: #b2e5d4 ;   /* background for open state */
   --accent-color: #ff6f61;        /* Accent color for highlights */
-  --background-light: #cce7e1;     /* General light background */
+  --background-light: #eafcf9;     /* General light background */
   --main-text-color: #2f3e3f;       /* Standard dark text */
+  --details-bg-color: rgba(94, 201, 179, 0.4); /*Background details*/
   
+}
+/* Dark mode variables */
+[data-theme="dark"] {
+  --main-color: #3a7d74;           /* a darker green */
+  --main-color-light: #2b4f4a;     /* dark tones for backgrounds */
+  --main-color-dark: #1f332f;      /* dark accents */
+  --main-color-open-bg: #1b3b37;
+  --accent-color: #ff9a8d;         /* lighter accent color for contrast */
+  --background-light: #121212;     /* dark background */
+  --main-text-color: #e0e0e0;      /* light text */
+  --details-bg-color: rgba(58, 125, 116, 0.4);
 }
 #navbar {
     display: flex;
@@ -43,6 +55,28 @@
     text-decoration: underline;
     
   }
+  .separator {
+    width: 0.2rem;
+    height: 1.5rem;;
+    background-color: rgba(255, 255, 255, 0.6);
+    margin: 0 0.5rem;
+}
+#theme-toggle {
+  font-size: 1rem;  
+  padding: 0.5rem 0.75rem;  
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease;
+}
+
+#theme-toggle i {
+  pointer-events: none;  /* Que solo el botón capture clicks */
+}
   /* Media query to small screens*/
 @media(max-width: 600px) {
     #navbar {
@@ -86,6 +120,7 @@ h2{
 #cv-container {
   width: 80%;
   margin: auto;
+  margin-top: 10rem;
   padding: 0 1.25rem;
   display: flex;
   gap: 2.5rem;
@@ -96,33 +131,55 @@ h2{
 #cv-container h2{
     text-align: center;
 }
-#education li{
-    list-style-type: none;
-    margin: 0.9375rem;
-  border-bottom:0.125rem solid var(--main-text-color);
-  padding-bottom: 1.875rem;
+#education li {
+  list-style: none;
+  background-color: var(--details-bg-color);
+  border-left: 4px solid var(--main-color);
+  margin: 1.25rem 0;
+  padding: 1rem 1.25rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+}
+
+#education li:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .skills-list {
+  display: flex;
   justify-content: center;
   list-style: none;
-  padding: 0;
+  padding: 2rem;
+  margin: 2rem 0 1rem;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.9375rem;
+  gap: 1.5rem 1rem;
 }
 
 .skill-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 5rem;
+  width: 6rem;
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  background-color: var(--details-bg-color);
   font-size: 0.875rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
   color:var(--main-text-color);
+}
+.skill-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 .skill-item i {
-  font-size: 3rem;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
 }
 #extra-sections{
     display: flex;
@@ -140,7 +197,7 @@ h2{
 }
 
 #extra-sections section {
-    background-color: var(--background-light);
+    background-color:var(--details-bg-color);
     padding: 1.25rem;
     border-radius: 0.75rem;
     box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.12);
@@ -163,6 +220,17 @@ h2{
     list-style-type: none;
     padding-left: 0;
     margin: 0;
+  }
+  #extra-sections li{
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+  .lang-extra {
+    font-style: italic;
+    color: #666;
+    font-size: 0.85rem;
+    display: block;
+    margin-top: 0.2rem;
   }
   strong{
     font-weight: 700;
@@ -288,7 +356,7 @@ p{
     margin-right: 10%;
 }
 #tagline, #profile {
-  background: rgba(94, 201, 179, 0.4);
+  background:var(--details-bg-color);
   backdrop-filter: blur(10px); 
   -webkit-backdrop-filter: blur(10px); /* To Safari */
   color: white;
@@ -363,7 +431,7 @@ footer{
 
 .timeline-item.left.open {
   border-left: 4px solid var(--main-color);
-  background-color:var(--main-color-open-bg);
+  background-color:var(--details-bg-color);
 }
 .timeline-item.right:hover {
   border-right: 4px solid var(--main-color);
@@ -372,7 +440,8 @@ footer{
 
 .timeline-item.right.open {
   border-right: 4px solid var(--main-color);
-  background-color:var(--main-color-open-bg);
+  background-color:var(--details-bg-color);
+
 }
 .timeline-item.visible {
   opacity: 1;
@@ -427,7 +496,7 @@ footer{
   margin-top: 0.8rem;
   font-size: 1rem;
   line-height: 1.4;
-  color: #4a4a4a;
+  color:var( --main-text-color);
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.4s ease;

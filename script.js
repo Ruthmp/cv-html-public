@@ -1,5 +1,4 @@
 //! Script.js
-
 //Note: Functions to display data in the HTML
 //? Functions to name:
 //* Create Full Name
@@ -70,22 +69,37 @@ function displayNavbar(data){
     const navbar = document.getElementById('navbar');
     if(!navbar) return;
     const sections=[
+        { id: 'top', icon: 'fas fa-arrow-up', title: 'Inicio' },
         {id: 'profile', icon: 'fas fa-user', title: data.labels.profile},
-        {id: 'education', icon: 'fas fa-graduation-cap', title: data.labels.education},
-        {id:'experience', icon: 'fas fa-briefcase', title: data.labels.experience},
         {id:'technicalSkills', icon: 'fas fa-code',title: data.labels.technicalSkillsTitle},
-        {id:'languages', icon: 'fas fa-language', title: data.labels.languagesTitle},
-        {id:'other', icon: 'fas fa-circle-plus', title: data.labels.other}
-    ]
+        {id:'experience', icon: 'fas fa-briefcase', title: data.labels.experience},
+        {id: 'education', icon: 'fas fa-graduation-cap', title: data.labels.education},
+        {
+            id: 'extra-sections',
+            icon: 'fas fa-globe', 
+            title: `${data.labels.languagesTitle} + ${data.labels.other}`
+          }
+    ];
     sections.forEach(section=>{
         const link= document.createElement('a');
         link.href= `#${section.id}`;
         link.innerHTML =`<i class ="${section.icon}"></i> `;
         link.title = section.title;
         navbar.appendChild(link);
-    })
-}
+    });
+    // Crear el separador
+    const separator = document.createElement('div');
+    separator.classList.add('separator');
+    navbar.appendChild(separator);
 
+    const darkModeBtn = document.createElement('button');
+    darkModeBtn.id = 'theme-toggle';
+    darkModeBtn.title = 'Toggle dark mode';
+    darkModeBtn.innerHTML = `<i class ="fas fa-moon"></i>`;
+
+    darkModeBtn.addEventListener('click', toggleTheme);
+    navbar.appendChild(darkModeBtn);
+}
 function displayEducation(education){
     const educationSection = document.getElementById('education');
     if(!educationSection) return;
@@ -154,11 +168,9 @@ function displaySkills(technicalSkills) {
     const skillsSection = document.getElementById('technicalSkills');
     if (!skillsSection) return;
 
-    let skillsHTML = `<h2>${technicalSkills.title}</h2>`;
+    let skillsHTML = `<h2>${technicalSkills.title}</h2><ul class="skills-list">`;
 
     technicalSkills.categories.forEach(category => {
-    skillsHTML += `<h3>${category.name}</h3><ul class="skills-list" style="list-style:none; padding:0; display:flex; flex-wrap:wrap; gap:15px;">`;
-
     category.skills.forEach(skill => {
         skillsHTML += `
         <li class="skill-item">
@@ -167,14 +179,11 @@ function displaySkills(technicalSkills) {
         </li>
         `;
     });
-
-    skillsHTML += `</ul>`;
-
     if (category.extra) {
         skillsHTML += `<p style="font-style: italic; font-size: 13px; margin-left: 10px; color: #555;">${category.extra}</p>`;
     }
     });
-
+    skillsHTML += `</ul>`;
     skillsSection.innerHTML = skillsHTML;
 }
 
@@ -186,7 +195,12 @@ function displayLanguages(languages){
         let languagesHTML = `<h2>${languages.title}</h2>`;
         languagesHTML+=`<ul>`;
         languages.items.forEach(lang =>{
-            languagesHTML+= `<li><strong>${lang.language}</strong>: ${lang.level}</li>`;
+            languagesHTML+= `<li>
+            <strong>${lang.language}</strong>: ${lang.level}`;
+            if (lang.extra) {
+                languagesHTML += `<br><small class="lang-extra">${lang.extra}</small>`;
+              }
+            languagesHTML+=`</li>`;
         });
         languagesHTML+=`</ul>`;
         languagesSection.innerHTML = languagesHTML;
@@ -219,7 +233,19 @@ function activarFadeIn() {
     });
 
     fadeItems.forEach(item => observer.observe(item));
-}
+};
+
+//* Dark Mode
+const toggleTheme =() =>{
+    const html= document.documentElement;
+
+    if(html.getAttribute('data-theme')==='dark'){
+        html.removeAttribute('data-theme');
+    }else{
+        html.setAttribute('data-theme', 'dark');
+    }
+};
+
 // Load json and display it in the HTML
 /**
  *  Load CV data from JSON file and display it in the HTML

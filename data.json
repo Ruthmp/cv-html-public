@@ -31,9 +31,10 @@
     "github": "https://github.com/Ruthmp",
     "website": null
   },
-  "tagline": "👩‍💻 Desarrolladora web en formación.",
-  "profile": "Me estoy formando como desarrolladora web y cuento con experiencia previa liderando equipos, trabajando en logística y atención al cliente. Me apasiona la tecnología y aprender cosas nuevas cada día. Actualmente estoy enfocada en mejorar mis habilidades en HTML, CSS y JavaScript, con el objetivo de crecer como desarrolladora frontend y aportar valor en proyectos reales.",
-  "education": {
+  "tagline": "👩‍💻 Desarrolladora web Junior.",
+  "profile": 
+    "Me estoy formando como desarrolladora web y cuento con experiencia previa liderando equipos, trabajando en logística y atención al cliente. Me apasiona la tecnología y aprender cosas nuevas cada día. Actualmente estoy enfocada en mejorar mis habilidades en HTML, CSS y JavaScript, con el objetivo de crecer como desarrolladora frontend y aportar valor en proyectos reales. Durante mis prácticas, he trabajado de forma continua con Git y GitHub en un flujo de desarrollo real.",
+    "education": {
     "title": "Formación Académica",
     "items": [
       {
@@ -128,8 +129,6 @@
         "key": "backend",
         "name": "Backend",
         "skills": [
-          {"name": "Java", "iconClass": "devicon-java-plain colored"},
-          {"name": "PHP", "iconClass": "devicon-php-plain colored"},
           {"name": "Go", "iconClass": "devicon-go-plain colored"}
         ]
       },
@@ -147,13 +146,6 @@
           {"name": "Git", "iconClass": "devicon-git-plain colored"},
           {"name": "GitHub", "iconClass": "devicon-github-original colored"}
         ]
-      },
-      {
-        "key": "desktop",
-        "name": "Escritorio",
-        "skills": [
-          {"name": "Java Swing", "iconClass": "devicon-java-plain colored"}
-        ]
       }
     ]
   },
@@ -161,12 +153,13 @@
     "title": "Idiomas",
     "items": [
       {
-        "language": "Español",
+        "language": "🇪🇸 Español",
         "level": "Nativo"
       },
       {
-        "language": "Inglés",
-        "level": "A2"
+        "language": "🇬🇧 Inglés",
+        "level": "A2",
+        "extra": "Mejorando diariamente con práctica informal"
       }
     ]
   },
