@@ -16,7 +16,7 @@
     "databases": "Base de Datos",
     "versionControl": "Control de Versiones",
     "desktop": "Escritorio",
-    "other": "Otros",
+    "other": "Habilidades Blandas",
     "experience":"Experiencia",
     "profile": "Perfil Profesional"
   },
@@ -164,9 +164,9 @@
     ]
   },
   "other": {
-    "title": "Otros",
+    "title": "Habilidades Blandas",
     "items": [
-      "Carné de conducir B",
+      "Carné de conducir",
       "Trabajo en equipo",
       "Comunicación efectiva",
       "Disponibilidad para viajar",
