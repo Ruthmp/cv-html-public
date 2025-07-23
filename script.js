@@ -1,4 +1,13 @@
 //! Script.js
+
+ //Default theme
+ (function (){
+    const savedTheme= localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+
+    document.documentElement.setAttribute('data-theme', theme);
+})();
 //Note: Functions to display data in the HTML
 //? Functions to name:
 //* Create Full Name
@@ -95,11 +104,30 @@ function displayNavbar(data){
     const darkModeBtn = document.createElement('button');
     darkModeBtn.id = 'theme-toggle';
     darkModeBtn.title = 'Toggle dark mode';
-    darkModeBtn.innerHTML = `<i class ="fas fa-moon"></i>`;
 
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    darkModeBtn.innerHTML = currentTheme === 'dark'
+        ? `<i class="fas fa-sun"></i>` 
+        : `<i class="fas fa-moon"></i>`;
+
+    //On/Off toggle for dark mode
+    function toggleTheme(){
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark'? 'light' : 'dark';
+
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+
+        //Listener for the button icon change
+        darkModeBtn.innerHTML = newTheme === 'dark' 
+            ? `<i class="fas fa-sun"></i>` 
+            : `<i class="fas fa-moon"></i>`;
+    }
+    // add event listener to the button
     darkModeBtn.addEventListener('click', toggleTheme);
     navbar.appendChild(darkModeBtn);
 }
+
 function displayEducation(education){
     const educationSection = document.getElementById('education');
     if(!educationSection) return;
@@ -233,17 +261,6 @@ function activarFadeIn() {
     });
 
     fadeItems.forEach(item => observer.observe(item));
-};
-
-//* Dark Mode
-const toggleTheme =() =>{
-    const html= document.documentElement;
-
-    if(html.getAttribute('data-theme')==='dark'){
-        html.removeAttribute('data-theme');
-    }else{
-        html.setAttribute('data-theme', 'dark');
-    }
 };
 
 // Load json and display it in the HTML

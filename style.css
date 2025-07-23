@@ -125,7 +125,6 @@ h2{
   display: flex;
   gap: 2.5rem;
   flex-wrap: wrap;
-  overflow: hidden;
   justify-content: center;
 }
 #cv-container h2{
@@ -239,10 +238,6 @@ h2{
 /* Style the header */
 header {
     background:var(--background-light);
-   /*background-image: url('../img/image.jpg');*/
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
     color: var(--main-text-color);
     padding: 1.25rem 0;
     text-align: center;
@@ -251,11 +246,21 @@ header div{
   margin: 4%;
 }
 .perfil-contenedor {
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+}
+.info-personal{
+  margin-bottom: 0;
+}
+.foto-info {
   display: flex;
   align-items: center;
   gap: 3rem; 
   padding: 1rem 2rem;
   border-radius: 1rem;
+  margin-top: auto;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 .foto-perfil{
   width: 20rem;
@@ -354,6 +359,7 @@ p{
     margin-bottom: 1.25rem;
     margin-left: 10%;
     margin-right: 10%;
+    padding-bottom: 10rem;
 }
 #tagline, #profile {
   background:var(--details-bg-color);
