@@ -77,6 +77,10 @@ function displayLabelAndValue (labelId, valueId, labelText, valueText){
 function displayNavbar(data){
     const navbar = document.getElementById('navbar');
     if(!navbar) return;
+
+    // Clear existing content
+    navbar.innerHTML = '';
+
     const sections=[
         { id: 'top', icon: 'fas fa-arrow-up', title: 'Inicio' },
         {id: 'profile', icon: 'fas fa-user', title: data.labels.profile},
@@ -271,9 +275,9 @@ function activarFadeIn() {
  * @returns {Promise<void>} - A promise that resolves when the CV data is loaded and displayed
  *  This function fetches the CV data from a JSON file, processes it, and updates the HTML elements
  */
-async function loadCV() {
+async function loadCV(jsonPath = 'data.json') {
     try{
-        const response = await fetch('data.json');
+        const response = await fetch(jsonPath);
         if (!response.ok) throw new Error('Error loading JSON file');
         const data = await response.json();
         const labels= data.labels; // Labels for the CV
@@ -332,4 +336,24 @@ async function loadCV() {
     }
     
 }
-window.addEventListener('DOMContentLoaded', loadCV);
+
+//*Setup buttons for language selection
+function initLanguageSelector(){
+    const buttons = document.querySelectorAll(".select-language");
+    buttons.forEach(button =>{
+        button.addEventListener("click", ()=>{
+            const language = button.getAttribute("data-lang");
+            const jsonPath= language ==="es"? "data_es.json": "data_en.json";
+            loadCV(jsonPath);
+
+            // Update the active button
+            buttons.forEach(btn=> btn.classList.remove("active"));
+            button.classList.add("active");
+        })
+    })
+}
+window.addEventListener('DOMContentLoaded', () =>{
+    console.log("DOM listo, cargando CV...");
+    loadCV('data_es.json'); // Default to Spanish
+    initLanguageSelector();
+});
