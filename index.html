@@ -9,35 +9,42 @@
         <link href="https://fonts.googleapis.com/css2?family=Exo+2&family=Press+Start+2P&display:wght@400;500;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icon-css/css/flag-icon.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+
 
     </head>
-    <body>
+    <body id="cv-web">
+        <div id="particles-js"></div>
         <header>
-            <div id="select-language">
-                <button class="select-language" data-lang="es"> 🇪🇸 </button>
-                <button class="select-language" data-lang="en"> 🇬🇧 </button>
+            <div id="user-controls">
+                <button class="select-language" data-lang="es">
+                    <span class="flag-icon flag-icon-es"></span>
+                </button>
+                <button class="select-language" data-lang="en">
+                    <span class="flag-icon flag-icon-gb"></span>
+                </button>
             </div>
             <div id="top" class="perfil-contenedor">
                 <div class="foto-info">
-                    <img src="img/imagen2.jpeg" alt="Foto de perfil" class="foto-perfil" />
+                    <img id="profile-photo" src="img/imagen2.jpeg" alt="Foto de perfil" class="foto-perfil" />
                     <div class="info-personal">
                         <h1 id="full-name"></h1>
                         <p id="tagline"></p>
                     </div>
                 </div>
-                <section id="profile"class="fade-in"></section>
             </div>
         </header>
          
 <main id="cv-container">
     <div id="contact-info"></div>
         <nav id="navbar"></nav>
-    
+    <section id="profile" class="fade-in"></section>
     <section id="technicalSkills" class="skills"></section>
-    <section id="experience"class="fade-in">
+    <section id="experience" class="fade-in">
     </section>
-    <section id="education"class="fade-in"></section>
-    <div id="extra-sections"class="fade-in">
+    <section id="education" class="fade-in"></section>
+    <div id="extra-sections" class="fade-in">
             <section id="languages"></section>
             <section id="other"></section>
     </div>
@@ -46,6 +53,9 @@
         <footer>
             <p> © 2025 Ruth Millán Piqueras.</p>
         </footer>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
+        <script src ="pdf-generator.js" defer></script>
         <script src="script.js" defer></script>
+       
     </body>
 </html>

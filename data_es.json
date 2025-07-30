@@ -2,7 +2,7 @@
   "labels": {
     "birthDate": "Fecha de Nacimiento: ",
     "location": "Ubicación: ",
-    "phone": "Teléfono: ",
+    "contact": "Contacto: ",
     "email": "Email: ",
     "linkedin": "LinkedIn: ",
     "github": "GitHub: ",
@@ -18,14 +18,13 @@
     "desktop": "Escritorio",
     "other": "Habilidades Blandas",
     "experience":"Experiencia",
-    "profile": "Perfil Profesional"
+    "profile": "Perfil Profesional",
+    "technologies": "Tecnologías"
   },
   "personalData": {
     "firstName": "Ruth",
     "lastName": "Millán Piqueras",
-    "birthDate": "1989-11-15",
-    "location": "Faura, Valencia",
-    "phone": "+34 665 062 613",
+    "location": "Valencia",
     "email": "ruth.millan.dev@gmail.com",
     "linkedin": "https://www.linkedin.com/in/ruth-millan-piqueras",
     "github": "https://github.com/Ruthmp",
@@ -64,6 +63,11 @@
         "startDate": "2025-03",
         "endDate": "2025-06",
         "hours": "370",
+        "technologies": [
+          { "name": "Go", "iconClass": "devicon-go-plain colored" },
+          { "name": "HTML5", "iconClass": "devicon-html5-plain colored" },
+          { "name": "CSS3", "iconClass": "devicon-css3-plain colored" }
+        ],
         "description": "Desarrollo de una aplicación en Go integrando la API de Google Drive. Funcionalidades implementadas: visualización de archivos y carpetas. Descarga manual o masiva (en ZIP) de archivos y carpetas mediante enlaces. Subida de archivos manual y masiva. Trabajo en equipo siguiendo buenas prácticas de control de versiones (Git) y documentación técnica."
       },
       {
