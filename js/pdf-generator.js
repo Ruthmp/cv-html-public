@@ -303,7 +303,7 @@ function generateOtherSections(doc, data, y) {
 async function downloadPDF() {
   const lang = getCurrentLanguage();
   console.log("Idioma actual:", lang);
-  const jsonPath = lang === "es" ? "data_es.json" : "data_en.json";
+  const jsonPath = lang === "es" ? "data/data_es.json" : "data/data_en.json";
 
   try {
     const response = await fetch(jsonPath);

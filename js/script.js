@@ -1,13 +1,4 @@
 //! Script.js
-
-//Default theme
-(function () {
-  const savedTheme = localStorage.getItem("theme");
-  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-  const theme = savedTheme || (prefersDark ? "dark" : "light");
-
-  document.documentElement.setAttribute("data-theme", theme);
-})();
 //Note: Functions to display data in the HTML
 //? Functions to name:
 //* Create Full Name
@@ -37,7 +28,7 @@ function displaytagline(tagline) {
   }
   typeWriter();
 }
-
+//? Functions to Profile
 function displayProfile(profile, title) {
   const profileSection = document.getElementById("profile");
   if (!profileSection) return;
@@ -66,18 +57,9 @@ function renderContactInformation(contactInfo) {
   const downloadBtn = document.getElementById("download-pdf");
   if (downloadBtn) {
     downloadBtn.addEventListener("click", () => {
-      console.log("Idioma en descarga:", localStorage.getItem("language"));
       downloadPDF();
     });
   }
-}
-
-function displayLabelAndValue(labelId, valueId, labelText, valueText) {
-  const labelElement = document.getElementById(labelId);
-  const valueElement = document.getElementById(valueId);
-
-  if (labelElement) labelElement.textContent = labelText;
-  if (valueElement) valueElement.textContent = valueText;
 }
 //? Function to dinamic menu.
 function displayNavbar(data) {
@@ -119,7 +101,7 @@ function displayNavbar(data) {
     navbar.appendChild(link);
   });
 }
-
+//? Function to display Education
 function displayEducation(education) {
   const educationSection = document.getElementById("education");
   if (!educationSection) return;
@@ -132,7 +114,7 @@ ${edu.institution}</span><span class="date"> (${edu.startYear} - ${edu.endYear})
   educationHTML += "</ul>";
   educationSection.innerHTML = educationHTML;
 }
-
+//? Function to display Work Experience
 function displayExperience(experience) {
   const experienceSection = document.getElementById("experience");
   if (!experienceSection) return;
@@ -173,6 +155,7 @@ function displayExperience(experience) {
     });
   });
 }
+//? Function to activate ScrollReveal for timeline items
 function activarScrollReveal() {
   const observer = new IntersectionObserver(
     (entries) => {
@@ -191,7 +174,7 @@ function activarScrollReveal() {
   const items = document.querySelectorAll(".timeline-item");
   items.forEach((item) => observer.observe(item));
 }
-
+//? Function to display Technical Skills
 function displaySkills(technicalSkills) {
   const skillsSection = document.getElementById("technicalSkills");
   if (!skillsSection) return;
@@ -214,7 +197,7 @@ function displaySkills(technicalSkills) {
   skillsHTML += `</ul>`;
   skillsSection.innerHTML = skillsHTML;
 }
-
+//? Function to display Languages
 function displayLanguages(languages) {
   const languagesSection = document.getElementById("languages");
   if (!languagesSection) return;
@@ -231,7 +214,7 @@ function displayLanguages(languages) {
   languagesHTML += `</ul>`;
   languagesSection.innerHTML = languagesHTML;
 }
-
+//? Function to display Other sections
 function displayOthers(other) {
   const otherSection = document.getElementById("other");
   if (!otherSection) return;
@@ -243,7 +226,7 @@ function displayOthers(other) {
   otherHTML += `</ul>`;
   otherSection.innerHTML = otherHTML;
 }
-
+//? Function to scroll
 function activarFadeIn() {
   const fadeItems = document.querySelectorAll(".fade-in");
 
@@ -252,7 +235,7 @@ function activarFadeIn() {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("visible");
-          observer.unobserve(entry.target); // solo una vez
+          observer.unobserve(entry.target); // only once
         }
       });
     },
@@ -263,40 +246,9 @@ function activarFadeIn() {
 
   fadeItems.forEach((item) => observer.observe(item));
 }
-function setupThemeToggle() {
-    const controls = document.getElementById("user-controls");
-    if (!controls) return;
-  
-    // Crear botón de modo
-    const darkModeBtn = document.createElement("button");
-    darkModeBtn.id = "theme-toggle";
-    darkModeBtn.title = "Modo oscuro/claro";
-  
-    const currentTheme = document.documentElement.getAttribute("data-theme");
-    darkModeBtn.innerHTML = currentTheme === "dark"
-      ? `<i class="fas fa-sun"></i>`
-      : `<i class="fas fa-moon"></i>`;
-  
-    darkModeBtn.addEventListener("click", () => {
-      const current = document.documentElement.getAttribute("data-theme");
-      const next = current === "dark" ? "light" : "dark";
-      document.documentElement.setAttribute("data-theme", next);
-      localStorage.setItem("theme", next);
-  
-      darkModeBtn.innerHTML = next === "dark"
-        ? `<i class="fas fa-sun"></i>`
-        : `<i class="fas fa-moon"></i>`;
-    });
-    const separator = document.createElement("div");
-    separator.classList.add("separator");
-    controls.appendChild(separator); 
 
-    controls.appendChild(darkModeBtn); 
-  
-    
-    
-  }
-  function iniciarParticulas() {
+  //? Function to background particles
+  function initParticles() {
     tsParticles.load("particles-js", {
       fullScreen: {
         enable: false
@@ -343,26 +295,7 @@ function setupThemeToggle() {
       detectRetina: true
     });
   }
-  //*Setup buttons for language selection
-function initLanguageSelector() {
-  const buttons = document.querySelectorAll(".select-language");
-  buttons.forEach((button) => {
-    button.addEventListener("click", () => {
-      const language = button.getAttribute("data-lang");
-      const jsonPath = language === "es" ? "data_es.json" : "data_en.json";
-
-      // Save the selected language in localStorage
-      localStorage.setItem("language", language);
-
-      // Load the selected language CV
-      loadCV(jsonPath);
-
-      // Update the active button
-      buttons.forEach((btn) => btn.classList.remove("active"));
-      button.classList.add("active");
-    });
-  });
-}
+ 
 
 // Load json and display it in the HTML
 /**
@@ -372,7 +305,7 @@ function initLanguageSelector() {
  * @returns {Promise<void>} - A promise that resolves when the CV data is loaded and displayed
  *  This function fetches the CV data from a JSON file, processes it, and updates the HTML elements
  */
-async function loadCV(jsonPath = "data.json") {
+async function loadCV(jsonPath = "data/data.json") {
   try {
     const response = await fetch(jsonPath);
     if (!response.ok) throw new Error("Error loading JSON file");
@@ -394,15 +327,6 @@ async function loadCV(jsonPath = "data.json") {
     renderContactInformation(contactInfo);
     displayNavbar(data);
 
-    
-  //* Display location
-    displayLabelAndValue(
-    'label-location',
-    'location',
-    labels.location,
-    data.personalData.location
-        )
-
     //* Display Education
     displayEducation(data.education);
 
@@ -419,6 +343,7 @@ async function loadCV(jsonPath = "data.json") {
     //* Display other
     displayOthers(data.other);
 
+    //* Fade-in effect
     activarFadeIn();
     
   } catch (error) {
@@ -427,11 +352,10 @@ async function loadCV(jsonPath = "data.json") {
 }
 
 window.addEventListener("DOMContentLoaded", () => {
-  loadCV("data_es.json"); // Default to Spanish
-  const defaultBtn = document.querySelector('[data-lang="es"]');
-  if (defaultBtn) defaultBtn.classList.add("active"); // Set default button as active
-
+  loadCV("data/data_es.json"); // Default to Spanish
+  
+  defaultLanguage();
   initLanguageSelector();
   setupThemeToggle();
-  iniciarParticulas();
+  initParticles();
 });
