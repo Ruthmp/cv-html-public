@@ -1,0 +1,321 @@
+#user-controls {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    gap: 0.5rem;
+    background-color: var(--background-light);
+    padding: 0.3rem 0.6rem;
+    z-index: 1100;
+    margin: 0.5rem;
+    overflow: hidden;
+}
+
+#user-controls button.select-language {
+    border: none;
+    background: transparent;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, filter 0.2s ease;
+    padding: 0.2rem;
+    border-radius: 0.3rem;
+    transform-origin: center;
+    will-change: transform;
+}
+
+#user-controls button.select-language:hover,
+#user-controls button.select-language:focus-visible {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.3));
+    outline-offset: 4px;
+}
+
+#user-controls button.select-language.active {
+    background-color: var(--details-bg-color);
+    color: white;
+    transform: scale(1.3);
+    filter: none;
+}
+
+#user-controls .separator {
+    width: 0.2rem;
+    height: 1.5rem;
+    background-color: var(--details-bg-color);
+    margin: 0 0.5rem;
+}
+
+/* Theme button */
+#theme-toggle {
+    font-size: 1rem;
+    padding: 0.5rem 0.75rem;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s ease;
+}
+
+#theme-toggle i {
+    pointer-events: none;
+    color: var(--details-bg-color);
+}
+
+#theme-toggle:hover {
+    transform: scale(1.2);
+}
+
+/* Skills */
+.skills-list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 2rem;
+    margin: 2rem 0 1rem;
+    flex-wrap: wrap;
+    gap: 1.5rem 1rem;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 6rem;
+    padding: 0.75rem;
+    border-radius: 0.75rem;
+    background-color: var(--details-bg-color);
+    font-size: 0.875rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    color: var(--main-text-color);
+}
+
+.skill-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.skill-item i {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Timeline cards, etc. */
+
+#education ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+#education li {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: var(--details-bg-color);
+    border-left: 4px solid var(--main-color);
+    margin: 1.25rem 0;
+    padding: 1rem 1.25rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#education li:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+#extra-sections {
+    display: flex;
+    justify-content: center;
+    gap: clamp(1rem, 3vw, 2rem);
+    flex-wrap: wrap;
+    margin: 2.5rem auto 0 auto;
+    padding: 1.25rem;
+    overflow-x: auto;
+    max-width: 1128px;
+    box-sizing: border-box;
+    scroll-snap-type: x mandatory;
+}
+
+#extra-sections section {
+    background-color: var(--details-bg-color);
+    padding: 1.25rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.12);
+    flex: 1 1 18.75rem;
+    max-width: 360px;
+    min-width: 280px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    scroll-snap-align: start;
+    transition: transform 0.3s ease;
+}
+
+#extra-sections section:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.18);
+}
+
+#extra-sections ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+#extra-sections li {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+#extra-sections li:hover {
+    color: var(--accent-color);
+    background-color: var(--details-bg-color);
+    cursor: default;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.flag-icon {
+    display: inline-block;
+    width: 32px;
+    height: 24px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 4px;
+}
+
+.lang-extra {
+    font-style: italic;
+    color: #666;
+    font-size: 0.85rem;
+    display: block;
+    margin-top: 0.2rem;
+}
+
+.tech-icons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 1.2rem;
+    font-size: 2rem;
+    margin-right: 1rem;
+}
+
+.tech-icons i:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Main content inside timeline items */
+.position {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--main-color);
+    margin-bottom: 0.3rem;
+}
+
+.company-location {
+    font-style: italic;
+    color: #555;
+    margin: 0 0 0.4rem;
+}
+
+.dates {
+    color: #888;
+    font-size: 0.9rem;
+}
+
+/* Point on the timeline line */
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 1.5rem;
+    width: 12px;
+    height: 12px;
+    background-color: var(--main-color);
+    border: 4px solid var(--main-color);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.timeline-item.left::before {
+    right: -8px;
+}
+
+.timeline-item.right::before {
+    left: -8px;
+}
+
+/* Timeline item states */
+.timeline-item {
+    position: relative;
+    width: 50%;
+    padding: 1rem 2rem;
+    box-sizing: border-box;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out, border-color 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+    user-select: none;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+}
+
+/* Toggle side */
+.timeline-item.left {
+    left: -3.5%;
+    text-align: right;
+}
+
+.timeline-item.right {
+    left: 50%;
+    text-align: left;
+}
+
+.timeline-item.left:hover {
+    border-left: 4px solid var(--main-color);
+    background-color: var(--main-color-light);
+}
+
+.timeline-item.left.open {
+    border-left: 4px solid var(--main-color);
+    background-color: var(--details-bg-color);
+}
+
+.timeline-item.right:hover {
+    border-right: 4px solid var(--main-color);
+    background-color: var(--main-color-light);
+}
+
+.timeline-item.right.open {
+    border-right: 4px solid var(--main-color);
+    background-color: var(--details-bg-color);
+}
+
+.timeline-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hidden description inside timeline items */
+.description {
+    margin-top: 0.8rem;
+    font-size: 1rem;
+    line-height: 1.4;
+    color: var(--main-text-color);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
+.timeline-item.open .description {
+    max-height: 62.5rem;
+    /* Enough to show everything */
+}

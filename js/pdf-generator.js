@@ -1,4 +1,4 @@
-
+//* Function to check if a new page is needed
 function checkAddPage(doc, y, lineHeight) {
   const pageHeight = 297;
   const marginBottom = 20;
@@ -12,6 +12,10 @@ function checkAddPage(doc, y, lineHeight) {
 function getCurrentLanguage() {
   return localStorage.getItem("language") || "es"; // Default to Spanish
 }
+function removeEmojis(text) {
+  return text.replace(/[^A-Za-z0-9ÁÉÍÓÚáéíóúÑñÜü \-.,]/g, ""); // remove emojis Unicode
+}
+//* Function to add the profile photo to the PDF
 function addPhotoToPDF(doc, y) {
   const img = document.getElementById("profile-photo");
   if (!img) return y;
@@ -24,8 +28,8 @@ function addPhotoToPDF(doc, y) {
   ctx.drawImage(img, 0, 0);
   const imageData = canvas.toDataURL("image/jpeg");
 
-  // Coordenadas y tamaño en el PDF
-  const x = 160; // derecha
+  // Coordinates and size in the PDF
+  const x = 160; // right side of the page
   const width = 30;
   const height = 30;
 
@@ -53,7 +57,7 @@ function generateProfile(doc, data, y) {
     doc.setFontSize(14);
     doc.text(data.labels.profile, 15, y);
     y += 4;
-    doc.setDrawColor(180); // Gris claro
+    doc.setDrawColor(180); // light gray
     doc.setLineWidth(0.3);
     doc.line(15, y, 200, y);
     y += 6;
@@ -72,7 +76,7 @@ function generateContactInfo(doc, data, y) {
     doc.setFontSize(14);
     doc.text(data.labels.contact, 15, y);
     y += 4;
-    doc.setDrawColor(180); // Gris claro
+    doc.setDrawColor(180); // light gray
     doc.setLineWidth(0.3);
     doc.line(15, y, 200, y);
     y += 6;
@@ -95,7 +99,7 @@ function generateContactInfo(doc, data, y) {
     const labelWidth2 = doc.getTextWidth(data.labels.linkedin + ' ');
     doc.setFont(undefined, 'normal');
     doc.text(data.personalData.linkedin, 15 + labelWidth2, y);
-    // Enlace clicable para LinkedIn
+    // Clickable link for LinkedIn
     doc.link(
       10 + labelWidth2,
       y - 5,
@@ -111,7 +115,7 @@ function generateContactInfo(doc, data, y) {
     const labelWidth3 = doc.getTextWidth(data.labels.github + ' ');
     doc.setFont(undefined, 'normal');
     doc.text(data.personalData.github, 15 + labelWidth3, y);
-    // Enlace clicable para GitHub
+    // Clickable link for GitHub
     doc.link(
       10 + labelWidth3,
       y - 5,
@@ -134,7 +138,7 @@ function generateTechnicalSkills(doc, data, y) {
   doc.setFontSize(14);
   doc.text(skills.title, 15, y);
   y += 4;
-  doc.setDrawColor(180); // Gris claro
+  doc.setDrawColor(180); // light gray
   doc.setLineWidth(0.3);
   doc.line(15, y, 200, y);
   y += 6;
@@ -166,7 +170,7 @@ function generateExperience(doc, data, y) {
   doc.setFontSize(14);
   doc.text(experience.title, 15, y);
   y += 4;
-  doc.setDrawColor(180); // Gris claro
+  doc.setDrawColor(180); // light gray
   doc.setLineWidth(0.3);
   doc.line(15, y, 200, y);
   y += 6;
@@ -215,7 +219,7 @@ function generateEducation(doc, data, y) {
   doc.setFontSize(14);
   doc.text(education.title, 15, y);
   y += 4;
-  doc.setDrawColor(180); // Gris claro
+  doc.setDrawColor(180); // light gray
   doc.setLineWidth(0.3);
   doc.line(15, y, 200, y);
   y += 6;
@@ -224,13 +228,13 @@ function generateEducation(doc, data, y) {
   education.items.forEach((item) => {
     y = checkAddPage(doc, y, 7);
     //Degree and institution
-   // Parte 1: Título y universidad en negrita
+   // Part 1: Title and university in bold
    doc.setFont("helvetica", "bold");
    doc.setFontSize(12);
    const text1 = `${item.degree} `;
    doc.text(text1, 17, y);
 
-   // Parte 2: Fechas en cursiva, justo después (alineado a la derecha)
+   // Part 2: Dates in italics, right after (aligned to the right)
    const dateText = `- ${item.institution} (${item.startYear} - ${item.endYear})`;
    doc.setFont("helvetica", "italic");
    const pageWidth = doc.internal.pageSize.getWidth();
@@ -246,9 +250,6 @@ function generateEducation(doc, data, y) {
   });
   return y;
 }
-function removeEmojis(text) {
-  return text.replace(/[^A-Za-z0-9ÁÉÍÓÚáéíóúÑñÜü \-.,]/g, ""); // remove emojis Unicode
-}
 //*Function to generate language section of the CV
 function generateLanguages(data, doc, y) {
   const language = data.languages;
@@ -258,7 +259,7 @@ function generateLanguages(data, doc, y) {
   doc.setFontSize(14);
   doc.text(language.title, 15, y);
   y += 4;
-  doc.setDrawColor(180); // Gris claro
+  doc.setDrawColor(180); // light gray
   doc.setLineWidth(0.3);
   doc.line(15, y, 200, y);
   y += 6;
@@ -284,7 +285,7 @@ function generateOtherSections(doc, data, y) {
   doc.setFontSize(14);
   doc.text(otherSections.title, 15, y);
   y += 4;
-  doc.setDrawColor(180); // Gris claro
+  doc.setDrawColor(180); // light gray
   doc.setLineWidth(0.3);
   doc.line(15, y, 200, y);
   y += 6;
@@ -314,11 +315,11 @@ async function downloadPDF() {
     const { jsPDF } = window.jspdf;
     const doc = new jsPDF();
     let y = 10;
-    // Fondo de color en el encabezado (rectángulo)
+    // Colored background in the header (rectangle)
     doc.setFillColor(94, 201, 179); // RGB de #5ec9b3 (Main color)
-    doc.rect(0, 0, 210, 40, "F"); // Tamaño A4 es 210mm de ancho, 40 de alto
+    doc.rect(0, 0, 210, 40, "F"); // A4 size is 210mm wide and 40mm high
 
-    // Color blanco para texto en el header
+    // White color for text in the header
     doc.setTextColor(255, 255, 255);
 
     addPhotoToPDF(doc, y);
