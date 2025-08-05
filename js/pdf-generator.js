@@ -31,7 +31,7 @@ function addPhotoToPDF(doc, y) {
   // Coordinates and size in the PDF
   const x = 160; // right side of the page
   const width = 30;
-  const height = 30;
+  const height = 35;
 
   doc.addImage(imageData, "JPEG", x, y, width, height);
   return y + img.naturalHeight * (width / img.naturalWidth) + 10; // Adjust y position for next section
@@ -40,15 +40,22 @@ function addPhotoToPDF(doc, y) {
 //* Function to generate the header section of the CV
 function generateHeader(doc, data, y) {
   const fullName = getFullName(data.personalData);
-  const imageHeight = 30;
-  const fontSize = 26;
-  const fontOffset = fontSize * 0.35;
+  const fontSize = 22;
+  const rectHeight = 40; // height of the rectangle in the header
+
+  // Text position
   doc.setFont("helvetica", "bold");
   doc.setFontSize(fontSize);
-  const textY = y + imageHeight / 2 + fontOffset / 2;
-  doc.text(fullName, 15, textY);
-  return y + imageHeight + 10;
+  doc.setTextColor(255, 255, 255);
+
+  // Center the text in the rectangle
+  const textY = y + rectHeight / 2 + fontSize * 0.35;
+
+  doc.text(fullName, 15, textY); // left margin of 15mm
+
+  return y + rectHeight + 10; // return the new y position after the header
 }
+
 
 //* Function to generate the profile section of the CV
 function generateProfile(doc, data, y) {
@@ -180,14 +187,15 @@ function generateExperience(doc, data, y) {
   experience.items.forEach((item) => {
     y = checkAddPage(doc, y, 7);
     //Job title and company
-    const jobPosition = `${item.position} - ${item.company} (${item.startDate} - ${item.endDate})`;
+    const jobPosition = `${item.position} - ${item.company}`;
     doc.setFont("helvetica", "bold");
     doc.text(jobPosition, 17, y);
     y += 7;
 
     //Location
+    const dateLocation= `(${item.startDate} – ${item.endDate}) | ${item.location}`;
     doc.setFont("helvetica", "italic");
-    doc.text(item.location, 17, y);
+    doc.text(dateLocation, 17, y);
     y += 7;
 
     //Technologies
@@ -231,16 +239,14 @@ function generateEducation(doc, data, y) {
    // Part 1: Title and university in bold
    doc.setFont("helvetica", "bold");
    doc.setFontSize(12);
-   const text1 = `${item.degree} `;
-   doc.text(text1, 17, y);
+   doc.text(item.degree, 17, y);
+   y += 6;
 
    // Part 2: Dates in italics, right after (aligned to the right)
-   const dateText = `- ${item.institution} (${item.startYear} - ${item.endYear})`;
    doc.setFont("helvetica", "italic");
-   const pageWidth = doc.internal.pageSize.getWidth();
-   const textWidth = doc.getTextWidth(dateText);
-   doc.text(dateText, pageWidth - textWidth - 15, y);
-    y += 7;
+doc.setFontSize(11);
+doc.text(`${item.institution} (${item.startYear} - ${item.endYear})`, 17, y);
+y += 6;
 
     //Description
     doc.setFont("helvetica", "normal");
@@ -322,8 +328,9 @@ async function downloadPDF() {
     // White color for text in the header
     doc.setTextColor(255, 255, 255);
 
-    addPhotoToPDF(doc, y);
-    y = generateHeader(doc, data, y);
+    
+    y = generateHeader(doc, data, 0);
+    addPhotoToPDF(doc, 5);
     doc.setTextColor(0, 0, 0);
     y = generateProfile(doc, data, y);
     y = generateContactInfo(doc, data, y);

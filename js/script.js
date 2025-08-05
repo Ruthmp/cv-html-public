@@ -1,4 +1,5 @@
 //! Script.js
+document.documentElement.lang = "en"; // o "es"
 //Note: Functions to display data in the HTML
 //? Functions to name:
 //* Create Full Name
@@ -249,6 +250,7 @@ function activarFadeIn() {
 
   //? Function to background particles
   function initParticles() {
+    const { particleColor, linkColor } = getParticleColorsByTheme();
     tsParticles.load("particles-js", {
       fullScreen: {
         enable: false
@@ -265,7 +267,7 @@ function activarFadeIn() {
           }
         },
         color: {
-          value: "348c74"
+          value: particleColor
         },
         shape: {
           type: "circle"
@@ -274,7 +276,7 @@ function activarFadeIn() {
           value: 0.3
         },
         size: {
-          value: { min: 1, max: 4 }
+          value: { min: 1, max: 6 }
         },
         move: {
           enable: true,
@@ -287,7 +289,7 @@ function activarFadeIn() {
         links: {
           enable: true,
           distance: 100,
-          color: "#5ec9b3",
+          color: linkColor,
           opacity: 0.2,
           width: 1
         }

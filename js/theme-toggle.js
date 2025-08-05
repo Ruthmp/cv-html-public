@@ -14,6 +14,7 @@ function setupThemeToggle() {
 
     // Create a button for dark mode toggle
     const darkModeBtn = document.createElement("button");
+    darkModeBtn.setAttribute("aria-label", "Cambiar entre tema claro y oscuro");
     darkModeBtn.id = "theme-toggle";
     darkModeBtn.title = "Modo oscuro/claro";
 
@@ -31,10 +32,26 @@ function setupThemeToggle() {
     darkModeBtn.innerHTML = next === "dark"
         ? `<i class="fas fa-sun"></i>`
         : `<i class="fas fa-moon"></i>`;
+
+        if (tsParticles.domItem(0)) {
+            tsParticles.domItem(0).destroy();
+        }
+        initParticles();
     });
     const separator = document.createElement("div");
     separator.classList.add("separator");
     controls.appendChild(separator); 
 
     controls.appendChild(darkModeBtn); 
+}
+
+//* Function to check current theme
+function getParticleColorsByTheme(){
+    const isDark = document.documentElement.getAttribute('data-theme')==='dark';
+
+    return{
+        particleColor: isDark? '#5EC9B3' : '#3A7D74', 
+        linkColor: isDark? '#8FE1D0' : '#b2e5d4'
+    
+    };
 }

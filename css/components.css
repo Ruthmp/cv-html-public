@@ -59,8 +59,7 @@
 }
 
 #theme-toggle i {
-    pointer-events: none;
-    color: var(--details-bg-color);
+    color: var(--main-color);
 }
 
 #theme-toggle:hover {
@@ -318,4 +317,10 @@
 .timeline-item.open .description {
     max-height: 62.5rem;
     /* Enough to show everything */
+}
+#footer-info a{
+color: var(--main-text-color)
+}
+#footer-info{
+    margin-bottom: 3rem;
 }

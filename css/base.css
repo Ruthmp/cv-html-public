@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 
-/* Variables para tema claro */
+/* Light mode variables */
 :root {
     --main-color: #3A7D74;
     /* Main color */
@@ -52,6 +52,7 @@
 /* Global */
 html {
     scroll-behavior: smooth;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 a {
