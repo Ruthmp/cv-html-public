@@ -50,8 +50,8 @@ function getParticleColorsByTheme(){
     const isDark = document.documentElement.getAttribute('data-theme')==='dark';
 
     return{
-        particleColor: isDark? '#5EC9B3' : '#3A7D74', 
-        linkColor: isDark? '#8FE1D0' : '#b2e5d4'
+        particleColor: isDark? '#d02398' : '#d02398', 
+        linkColor: isDark? '#f15fb7' : '#d02398'
     
     };
 }

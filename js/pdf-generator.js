@@ -60,7 +60,7 @@ function generateHeader(doc, data, y) {
 //* Function to generate the profile section of the CV
 function generateProfile(doc, data, y) {
     doc.setFont("helvetica", "bold");
-    doc.setTextColor(94, 201, 179);
+    doc.setTextColor(50, 91, 157);
     doc.setFontSize(14);
     doc.text(data.labels.profile, 15, y);
     y += 4;
@@ -79,7 +79,7 @@ function generateProfile(doc, data, y) {
 //* Function to generate the contact information section of the CV
 function generateContactInfo(doc, data, y) {
     doc.setFont("helvetica", "bold");
-    doc.setTextColor(94, 201, 179);
+    doc.setTextColor(50, 91, 157);
     doc.setFontSize(14);
     doc.text(data.labels.contact, 15, y);
     y += 4;
@@ -141,7 +141,7 @@ function generateTechnicalSkills(doc, data, y) {
   const skills = data.technicalSkills;
   y += 10; // Add space before skills section
   doc.setFont("helvetica", "bold");
-  doc.setTextColor(94, 201, 179);
+  doc.setTextColor(50, 91, 157);
   doc.setFontSize(14);
   doc.text(skills.title, 15, y);
   y += 4;
@@ -173,7 +173,7 @@ function generateExperience(doc, data, y) {
   const experience = data.experience;
   y += 10; // Add space before experience section
   doc.setFont("helvetica", "bold");
-  doc.setTextColor(94, 201, 179);
+  doc.setTextColor(50, 91, 157);
   doc.setFontSize(14);
   doc.text(experience.title, 15, y);
   y += 4;
@@ -195,8 +195,10 @@ function generateExperience(doc, data, y) {
     //Location
     const dateLocation= `(${item.startDate} – ${item.endDate}) | ${item.location}`;
     doc.setFont("helvetica", "italic");
+    doc.setTextColor(253, 141, 183);
     doc.text(dateLocation, 17, y);
     y += 7;
+    doc.setTextColor(0, 0, 0);
 
     //Technologies
     if (item.technologies && item.technologies.length > 0) {
@@ -223,7 +225,7 @@ function generateEducation(doc, data, y) {
   const education = data.education;
   y += 10; // Add space before education section
   doc.setFont("helvetica", "bold");
-  doc.setTextColor(94, 201, 179);
+  doc.setTextColor(50, 91, 157);
   doc.setFontSize(14);
   doc.text(education.title, 15, y);
   y += 4;
@@ -244,9 +246,11 @@ function generateEducation(doc, data, y) {
 
    // Part 2: Dates in italics, right after (aligned to the right)
    doc.setFont("helvetica", "italic");
+   doc.setTextColor(253, 141, 183);
 doc.setFontSize(11);
 doc.text(`${item.institution} (${item.startYear} - ${item.endYear})`, 17, y);
 y += 6;
+doc.setTextColor(0, 0, 0);
 
     //Description
     doc.setFont("helvetica", "normal");
@@ -261,7 +265,7 @@ function generateLanguages(data, doc, y) {
   const language = data.languages;
   y += 10; // Add space before languages section
   doc.setFont("helvetica", "bold");
-  doc.setTextColor(94, 201, 179);
+  doc.setTextColor(50, 91, 157);
   doc.setFontSize(14);
   doc.text(language.title, 15, y);
   y += 4;
@@ -287,7 +291,7 @@ function generateOtherSections(doc, data, y) {
   const otherSections = data.other;
   y += 10; // Add space before other sections
   doc.setFont("helvetica", "bold");
-  doc.setTextColor(94, 201, 179);
+  doc.setTextColor(50, 91, 157);
   doc.setFontSize(14);
   doc.text(otherSections.title, 15, y);
   y += 4;
@@ -322,7 +326,7 @@ async function downloadPDF() {
     const doc = new jsPDF();
     let y = 10;
     // Colored background in the header (rectangle)
-    doc.setFillColor(94, 201, 179); // RGB de #5ec9b3 (Main color)
+    doc.setFillColor(50, 91, 157); // RGB de #5ec9b3 (Main color)
     doc.rect(0, 0, 210, 40, "F"); // A4 size is 210mm wide and 40mm high
 
     // White color for text in the header

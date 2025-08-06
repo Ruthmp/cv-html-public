@@ -4,11 +4,13 @@
     right: 1rem;
     display: flex;
     gap: 0.5rem;
-    background-color: var(--background-light);
+    background-color:rgba(255, 255, 255, 0.2);
     padding: 0.3rem 0.6rem;
     z-index: 1100;
     margin: 0.5rem;
-    overflow: hidden;
+    overflow: visible;
+    backdrop-filter: blur(6px);
+    border-radius: 1rem;
 }
 
 #user-controls button.select-language {
@@ -21,11 +23,12 @@
     border-radius: 0.3rem;
     transform-origin: center;
     will-change: transform;
+    
 }
 
 #user-controls button.select-language:hover,
 #user-controls button.select-language:focus-visible {
-    transform: scale(1.2);
+    outline: 2px solid var(--main-color);
     filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.3));
     outline-offset: 4px;
 }
@@ -33,7 +36,7 @@
 #user-controls button.select-language.active {
     background-color: var(--details-bg-color);
     color: white;
-    transform: scale(1.3);
+    transform: scale(1.2);
     filter: none;
 }
 

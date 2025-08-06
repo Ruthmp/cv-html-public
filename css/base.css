@@ -7,44 +7,45 @@
 
 /* Light mode variables */
 :root {
-    --main-color: #3A7D74;
+    --main-color-header:#00b7ce;
+    --main-color: #325b9d;
     /* Main color */
-    --main-color-light: #dff6f0;
+    --main-color-light: #d3b0e4;
     /* Very light (hover, backgrounds) */
-    --main-color-dark: #348c74;
+    --main-color-dark: #902173;
     /* for borders & accents */
-    --main-color-open-bg: #b2e5d4;
+    --main-color-open-bg: #fdabbd;
     /* background for open state */
-    --accent-color: #ff6f61;
+    --accent-color: #fd8db7;
     /* Accent color for highlights */
-    --background-light: #eafcf9;
+    --background-light: #f8f4fa;
     /* General light background */
     --main-text-color: #2f3e3f;
     /* Standard dark text */
-    --details-bg-color: rgba(94, 201, 179, 0.4);
+    --details-bg-color: rgba(208, 35, 152, 0.15);
     /*Background details*/
-    --border-color: #ccc;
+    --border-color: #8781c6;
     /*Border Color NavBar*/
 
 }
 
 /* Dark mode variables */
 [data-theme="dark"] {
-    --main-color: #5ec9b3;
+    --main-color: #00b7ce;
     /* a darker green */
-    --main-color-light: #2b4f4a;
+    --main-color-light: #325b9d;
     /* dark tones for backgrounds */
-    --main-color-dark: #1f332f;
+    --main-color-dark: #1a2333;
     /* dark accents */
-    --main-color-open-bg: #1b3b37;
-    --accent-color: #ff9a8d;
+    --main-color-open-bg: #445b5a;
+    --accent-color: #fd8db7;
     /* lighter accent color for contrast */
     --background-light: #121212;
     /* dark background */
-    --main-text-color: #e0e0e0;
+    --main-text-color: #eaeaea;
     /* light text */
-    --details-bg-color: rgba(58, 125, 116, 0.4);
-    --border-color: #444;
+    --details-bg-color: rgba(237, 37, 178, 0.2);
+    --border-color: #3a4552;
 }
 
 /*! Style CV-html */
@@ -83,11 +84,13 @@ strong {
 }
 
 h1 {
-    color: var(--main-color);
+    color: var(--main-color-header);
     font-family: 'Press Start 2P', cursive;
     font-weight: bold;
     font-size: 3.5rem;
     text-align: center;
+    text-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
+    
 }
 
 h2 {

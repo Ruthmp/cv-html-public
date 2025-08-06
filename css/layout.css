@@ -44,7 +44,19 @@ header {
     color: var(--main-text-color);
     padding: 1.25rem 0;
     text-align: center;
+
 }
+header::before {
+    content: "";
+    position: absolute;
+    inset: 0; /* top:0; right:0; bottom:0; left:0; */
+    background-image: url('../img/Laptop\ with\ Code\ in\ Serene\ Cityscape.png');
+    background-size: cover;
+    background-position: center;
+    transform: scaleX(-1); /* solo la imagen se invierte */
+    filter: blur(2px) brightness(0.6);
+    z-index: -1; /* detrás del contenido */
+  }
 
 /* Ensure all elements inside header are above background */
 header * {
@@ -184,6 +196,7 @@ footer p {
     border-radius: 0 1rem 1rem 0;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
     z-index: 1000;
+
 }
 
 #contact-info .contact-item {
@@ -226,9 +239,10 @@ footer p {
     width: 16rem;
     height: 20rem;
     border-radius: 20%;
-    border: 3px solid var(--main-color);
+    border: 3px solid #325b9d;
     object-fit: cover;
     margin-right: 1.25rem;
+    margin-left: 5rem;
 }
 
 .info-personal {
