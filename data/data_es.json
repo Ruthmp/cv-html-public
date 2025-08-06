@@ -1,25 +1,19 @@
 {
   "labels": {
-    "birthDate": "Fecha de Nacimiento: ",
-    "location": "Ubicación: ",
     "contact": "Contacto: ",
     "email": "Email: ",
     "linkedin": "LinkedIn: ",
     "github": "GitHub: ",
-    "website": "Página web: ",
     "education":"Formación",
     "technicalSkillsTitle": "Habilidades",
     "languagesTitle": "Idiomas ",
-    "otherTitle": "Otros ",
-    "frontend": "Frontend",
-    "backend": "Backend",
-    "databases": "Base de Datos",
-    "versionControl": "Control de Versiones",
-    "desktop": "Escritorio",
     "other": "Habilidades Blandas",
     "experience":"Experiencia",
     "profile": "Perfil Profesional",
-    "technologies": "Tecnologías"
+    "technologies": "Tecnologías",
+    "top": "Inicio",
+    "portfolio": "Portafolio",
+    "date": "Fecha"
   },
   "personalData": {
     "firstName": "Ruth",
@@ -33,22 +27,40 @@
   "tagline": "👩‍💻 Desarrolladora web Junior.",
   "profile": 
     "Me estoy formando como desarrolladora web y cuento con experiencia previa liderando equipos, trabajando en logística y atención al cliente. Me apasiona la tecnología y aprender cosas nuevas cada día. Actualmente estoy enfocada en mejorar mis habilidades en HTML, CSS y JavaScript, con el objetivo de crecer como desarrolladora frontend y aportar valor en proyectos reales. Durante mis prácticas, he trabajado de forma continua con Git y GitHub en un flujo de desarrollo real.",
-    "education": {
-    "title": "Formación Académica",
-    "items": [
+    
+  "technicalSkills": {
+    "title": "Habilidades Técnicas (Skills)",
+    "categories": [
       {
-        "degree": "Técnico Superior en Desarrollo de Aplicaciones Web",
-        "institution": "MEDAC",
-        "startYear": "2023",
-        "endYear": "2025",
-        "description": "Formación completa en desarrollo frontend y backend."
+        "key": "frontend",
+        "name": "Frontend",
+        "skills": [
+          {"name": "HTML5", "iconClass": "devicon-html5-plain colored"},
+          {"name": "CSS3", "iconClass": "devicon-css3-plain colored"},
+          {"name": "JavaScript", "iconClass": "devicon-javascript-plain colored"}
+        ]
       },
       {
-        "degree": "Grado Universitario en Criminología y Seguridad",
-        "institution": "Universidad Jaime I",
-        "startYear": "2008",
-        "endYear": "2013",
-        "description": "Formación superior en criminología, con enfoque en análisis, prevención y gestión de la seguridad."
+        "key": "backend",
+        "name": "Backend",
+        "skills": [
+          {"name": "Go", "iconClass": "devicon-go-plain colored"}
+        ]
+      },
+      {
+        "key": "databases",
+        "name": "Bases de Datos",
+        "skills": [
+          {"name": "MySQL", "iconClass": "devicon-mysql-plain colored"}
+        ]
+      },
+      {
+        "key": "versionControl",
+        "name": "Control de Versiones",
+        "skills": [
+          {"name": "Git", "iconClass": "devicon-git-plain colored"},
+          {"name": "GitHub", "iconClass": "devicon-github-original colored"}
+        ]
       }
     ]
   },
@@ -117,39 +129,22 @@
       }
     ]
   },
-  "technicalSkills": {
-    "title": "Habilidades Técnicas (Skills)",
-    "categories": [
+  "education": {
+    "title": "Formación Académica",
+    "items": [
       {
-        "key": "frontend",
-        "name": "Frontend",
-        "skills": [
-          {"name": "HTML5", "iconClass": "devicon-html5-plain colored"},
-          {"name": "CSS3", "iconClass": "devicon-css3-plain colored"},
-          {"name": "JavaScript", "iconClass": "devicon-javascript-plain colored"}
-        ]
+        "degree": "Técnico Superior en Desarrollo de Aplicaciones Web",
+        "institution": "MEDAC",
+        "startYear": "2023",
+        "endYear": "2025",
+        "description": "Formación completa en desarrollo frontend y backend."
       },
       {
-        "key": "backend",
-        "name": "Backend",
-        "skills": [
-          {"name": "Go", "iconClass": "devicon-go-plain colored"}
-        ]
-      },
-      {
-        "key": "databases",
-        "name": "Bases de Datos",
-        "skills": [
-          {"name": "MySQL", "iconClass": "devicon-mysql-plain colored"}
-        ]
-      },
-      {
-        "key": "versionControl",
-        "name": "Control de Versiones",
-        "skills": [
-          {"name": "Git", "iconClass": "devicon-git-plain colored"},
-          {"name": "GitHub", "iconClass": "devicon-github-original colored"}
-        ]
+        "degree": "Grado Universitario en Criminología y Seguridad",
+        "institution": "Universidad Jaime I",
+        "startYear": "2008",
+        "endYear": "2013",
+        "description": "Formación superior en criminología, con enfoque en análisis, prevención y gestión de la seguridad."
       }
     ]
   },

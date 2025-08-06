@@ -71,7 +71,7 @@ function displayNavbar(data) {
   navbar.innerHTML = "";
 
   const sections = [
-    { id: "top", icon: "fas fa-arrow-up", title: "Inicio" },
+    { id: "top", icon: "fas fa-arrow-up", title: data.labels.top },
     { id: "profile", icon: "fas fa-user", title: data.labels.profile },
     {
       id: "technicalSkills",

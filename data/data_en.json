@@ -1,25 +1,19 @@
 {
   "labels": {
-    "birthDate": "Date of Birth: ",
-    "location": "Location: ",
     "contact": "Contact: ",
     "email": "Email: ",
     "linkedin": "LinkedIn: ",
     "github": "GitHub: ",
-    "website": "Website: ",
     "education": "Education",
     "technicalSkillsTitle": "Skills",
     "languagesTitle": "Languages ",
-    "otherTitle": "Other ",
-    "frontend": "Frontend",
-    "backend": "Backend",
-    "databases": "Databases",
-    "versionControl": "Version Control",
-    "desktop": "Desktop",
     "other": "Soft Skills",
     "experience": "Experience",
     "profile": "Professional Profile",
-    "technologies": "Technologies"
+    "technologies": "Technologies",
+    "top": "Home",
+    "portfolio": "Portfolio",
+    "date": "Date"
   },
   "personalData": {
     "firstName": "Ruth",
@@ -32,22 +26,41 @@
   },
   "tagline": "👩‍💻 Junior Web Developer.",
   "profile": "I am training to become a web developer and have previous experience leading teams, working in logistics, and customer service. I’m passionate about technology and learning new things every day. I’m currently focused on improving my skills in HTML, CSS, and JavaScript, aiming to grow as a frontend developer and contribute to real-world projects. During my internship, I worked consistently with Git and GitHub in a real development workflow.",
-  "education": {
-    "title": "Academic Background",
-    "items": [
+  
+  "technicalSkills": {
+    "title": "Technical Skills",
+    "categories": [
       {
-        "degree": "Higher Technician in Web Application Development",
-        "institution": "MEDAC",
-        "startYear": "2023",
-        "endYear": "2025",
-        "description": "Comprehensive training in frontend and backend development."
+        "key": "frontend",
+        "name": "Frontend",
+        "skills": [
+          { "name": "HTML5", "iconClass": "devicon-html5-plain colored" },
+          { "name": "CSS3", "iconClass": "devicon-css3-plain colored" },
+          {
+            "name": "JavaScript",
+            "iconClass": "devicon-javascript-plain colored"
+          }
+        ]
       },
       {
-        "degree": "Degree in Criminology and Security",
-        "institution": "Universidad Jaime I",
-        "startYear": "2008",
-        "endYear": "2013",
-        "description": "Higher education in criminology, focused on analysis, prevention, and security management."
+        "key": "backend",
+        "name": "Backend",
+        "skills": [{ "name": "Go", "iconClass": "devicon-go-plain colored" }]
+      },
+      {
+        "key": "databases",
+        "name": "Databases",
+        "skills": [
+          { "name": "MySQL", "iconClass": "devicon-mysql-plain colored" }
+        ]
+      },
+      {
+        "key": "versionControl",
+        "name": "Version Control",
+        "skills": [
+          { "name": "Git", "iconClass": "devicon-git-plain colored" },
+          { "name": "GitHub", "iconClass": "devicon-github-original colored" }
+        ]
       }
     ]
   },
@@ -116,40 +129,22 @@
       }
     ]
   },
-  "technicalSkills": {
-    "title": "Technical Skills",
-    "categories": [
+  "education": {
+    "title": "Academic Background",
+    "items": [
       {
-        "key": "frontend",
-        "name": "Frontend",
-        "skills": [
-          { "name": "HTML5", "iconClass": "devicon-html5-plain colored" },
-          { "name": "CSS3", "iconClass": "devicon-css3-plain colored" },
-          {
-            "name": "JavaScript",
-            "iconClass": "devicon-javascript-plain colored"
-          }
-        ]
+        "degree": "Higher Technician in Web Application Development",
+        "institution": "MEDAC",
+        "startYear": "2023",
+        "endYear": "2025",
+        "description": "Comprehensive training in frontend and backend development."
       },
       {
-        "key": "backend",
-        "name": "Backend",
-        "skills": [{ "name": "Go", "iconClass": "devicon-go-plain colored" }]
-      },
-      {
-        "key": "databases",
-        "name": "Databases",
-        "skills": [
-          { "name": "MySQL", "iconClass": "devicon-mysql-plain colored" }
-        ]
-      },
-      {
-        "key": "versionControl",
-        "name": "Version Control",
-        "skills": [
-          { "name": "Git", "iconClass": "devicon-git-plain colored" },
-          { "name": "GitHub", "iconClass": "devicon-github-original colored" }
-        ]
+        "degree": "Degree in Criminology and Security",
+        "institution": "Universidad Jaime I",
+        "startYear": "2008",
+        "endYear": "2013",
+        "description": "Higher education in criminology, focused on analysis, prevention, and security management."
       }
     ]
   },
