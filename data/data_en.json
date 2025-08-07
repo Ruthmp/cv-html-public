@@ -70,7 +70,7 @@
     {
       "icon": "🌐",
       "title": "Dynamic CV Website",
-      "description": "Interactive and responsive CV built with HTML, CSS, and JS. Supports multiple languages, dark/light mode, and PDF export with jsPDF.",
+      "description": "This is the same page you are visiting: an interactive and responsive resume developed with HTML, CSS, and JavaScript. The project includes support for multiple languages, light and dark mode, and PDF export functionality using jsPDF.",
       "technologies": [
         { "name": "HTML5", "iconClass": "devicon-html5-plain colored" },
         { "name": "CSS3", "iconClass": "devicon-css3-plain colored" },

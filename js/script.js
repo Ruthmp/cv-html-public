@@ -79,6 +79,11 @@ function displayNavbar(data) {
       title: data.labels.technicalSkillsTitle,
     },
     {
+      id: "portfolio",
+      icon: "fas fa-laptop-code",
+      title: data.labels.portfolio,
+    },
+    {
       id: "experience",
       icon: "fas fa-briefcase",
       title: data.labels.experience,
