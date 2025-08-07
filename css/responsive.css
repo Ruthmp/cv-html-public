@@ -63,6 +63,10 @@
     #education ul {
         padding: 0 1rem;
     }
+    .portfolio-item {
+        flex-basis: 100%;
+        max-width: 100%;
+      }
 }
 
 /* Responsive for medium screens */

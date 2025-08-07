@@ -64,6 +64,37 @@
       }
     ]
   },
+  "portfolio": {
+  "title": "Portfolio",
+  "items": [
+    {
+      "icon": "🌐",
+      "title": "Dynamic CV Website",
+      "description": "Interactive and responsive CV built with HTML, CSS, and JS. Supports multiple languages, dark/light mode, and PDF export with jsPDF.",
+      "technologies": [
+        { "name": "HTML5", "iconClass": "devicon-html5-plain colored" },
+        { "name": "CSS3", "iconClass": "devicon-css3-plain colored" },
+        { "name": "JavaScript", "iconClass": "devicon-javascript-plain colored" },
+        { "name": "jsPDF", "iconClass": "devicon-nodejs-plain colored" }
+      ],
+      "image": "img/portfolio-cv.png",
+      "demo": "https://tusitio.com",
+      "github": "https://github.com/tuusuario/cv-html-public"
+    },
+    {
+      "icon": "",
+      "title": "🛠️ Coming Soon",
+      "description": "Currently working on new projects. They will be available soon!",
+      "technologies": [
+        { "name": "", "iconClass": "" }
+      ],
+      "image": "",
+      "demo": "",
+      "github": ""
+    }
+    
+  ]
+},
   "experience": {
     "title": "Work Experience",
     "items": [

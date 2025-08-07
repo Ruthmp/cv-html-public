@@ -115,6 +115,43 @@ ${edu.institution}</span><span class="date"> (${edu.startYear} - ${edu.endYear})
   educationHTML += "</ul>";
   educationSection.innerHTML = educationHTML;
 }
+//? Function to display portfolio
+function displayPortfolio(portfolio){
+  const portfolioSection = document.getElementById("portfolio");
+  portfolioSection.innerHTML = ""; // Clear existing content
+  if (!portfolioSection) return;
+  const title = `<h2>${portfolio.title}</h2>`;
+let portfolioHTML = `<div class="portfolio-container">`;
+
+  portfolio.items.forEach(project => {
+    const techIcons = project.technologies.map(tech => 
+      `<i class = "${tech.iconClass}" title="${tech.name}" aria-label="${tech.name}"></i>`
+    ).join(" ");
+
+   portfolioHTML +=`
+<div class="portfolio-item">
+   ${project.image ? `<img src="${project.image}" alt="${project.title}">` : ''}
+  <h3>${project.icon || ""} ${project.title}</h3>
+  <p>${project.description}</p>
+  <div class = "tech-icons">${techIcons}</div>
+  <div class ="portfolio-links">
+   ${project.demo ? `<a href="${project.demo}" target="_blank" rel="noopener noreferrer" class="btn btn-portfolio">
+    <i class="fas fa-external-link-alt"></i> Demo
+  </a>` : ''}
+  
+  ${project.github ? `<a href="${project.github}" target="_blank" rel="noopener noreferrer" class="btn btn-portfolio">
+    <i class="fab fa-github"></i> Código
+  </a>` : ''}
+</div>
+  </div>
+    `;
+   
+  });
+  portfolioHTML += `</div>`;
+  portfolioSection.innerHTML = title + portfolioHTML;
+
+}
+
 //? Function to display Work Experience
 function displayExperience(experience) {
   const experienceSection = document.getElementById("experience");
@@ -331,6 +368,9 @@ async function loadCV(jsonPath = "data/data.json") {
 
     //* Display Education
     displayEducation(data.education);
+
+    //* Display Portfolio
+    displayPortfolio(data.portfolio);
 
     //* Display Work Experience
     displayExperience(data.experience);
