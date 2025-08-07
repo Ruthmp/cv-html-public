@@ -90,11 +90,12 @@ Incluye funcionalidades modernas como modo oscuro, selector de idioma, y exporta
 ## 📷 Vista Previa
 
 ### 🌞 Modo Claro
-<img width="1422" height="843" alt="Captura de pantalla 2025-08-06 a las 21 03 41" src="https://github.com/user-attachments/assets/7b56dad9-39cd-4654-9c71-8ce422ac719c" />
-<img width="1425" height="845" alt="Captura de pantalla 2025-08-06 a las 21 17 35" src="https://github.com/user-attachments/assets/6480521b-4b78-4637-ad99-bbbdac4796b7" />
+<img width="555" height="410" alt="Captura de pantalla 2025-08-06 a las 21 03 41" src="https://github.com/user-attachments/assets/7b56dad9-39cd-4654-9c71-8ce422ac719c" />
+
+<img width="555" height="410" alt="Captura de pantalla 2025-08-06 a las 21 17 35" src="https://github.com/user-attachments/assets/6480521b-4b78-4637-ad99-bbbdac4796b7" />
 
 ### 🌚 Modo Oscuro
-<img width="1420" height="845" alt="Captura de pantalla 2025-08-06 a las 21 05 24" src="https://github.com/user-attachments/assets/ea1fbe7e-1e99-46e5-807b-de909477c784" />
+<img width="555" height="410" alt="Captura de pantalla 2025-08-06 a las 21 05 24" src="https://github.com/user-attachments/assets/ea1fbe7e-1e99-46e5-807b-de909477c784" />
 
 
 
