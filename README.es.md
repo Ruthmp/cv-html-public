@@ -107,10 +107,6 @@ Incluye funcionalidades modernas como modo oscuro, selector de idioma, y exporta
 
 
 
-## 🔄 Próximas Mejoras
-
-* ✨ Sección de proyectos interactivos
-
 ## 🎨 Créditos
 
 - Ilustraciones por [Lummi](https://lummi.com)  
