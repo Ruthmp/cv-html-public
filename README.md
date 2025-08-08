@@ -108,6 +108,16 @@ It includes modern features such as dark mode, language selector, and PDF export
 
 * ✨ Interactive projects section
 
+
+---
+
+## 🎨 Credits
+
+- Illustrations by [Lummi](https://lummi.com)  
+- Icons by [Font Awesome](https://fontawesome.com/), [Devicon](https://devicon.dev/), and [Flag Icons](https://flagicons.lipis.dev/)  
+- Fonts provided by [Google Fonts](https://fonts.google.com/)
+
+---
 ## 📅 Last Update
 
 **08/06/2025**
