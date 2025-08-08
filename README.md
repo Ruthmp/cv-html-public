@@ -5,6 +5,11 @@
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat\&logo=javascript\&logoColor=black)
 ![jsPDF](https://img.shields.io/badge/jsPDF-8A4182?style=flat\&logo=jsPDF\&logoColor=white)
 
+### ⚠️ Important Note
+
+> This repository contains fictional and sample data to demonstrate the functionality of the web CV. It does not represent real personal information.
+
+
 ### 🌐 Available in other languages
 
 - [🇪🇸 Spanish](README.es.md)
@@ -89,11 +94,14 @@ It includes modern features such as dark mode, language selector, and PDF export
 
 ### 🌚 Dark Mode
 
+<img width="555" height="410" alt="Captura de pantalla 2025-08-08 a las 10 27 43" src="https://github.com/user-attachments/assets/0e1bb7d1-81cc-4a44-b167-a5747a39d46d" />
 
+<img width="555" height="410" alt="Captura de pantalla 2025-08-08 a las 10 28 19" src="https://github.com/user-attachments/assets/5a4053f1-d2b3-4fd9-ac2c-eae4779a31de" />
 
 
 ### 🌞 Light Mode
 
+<img width="555" height="410" alt="Captura de pantalla 2025-08-08 a las 10 28 45" src="https://github.com/user-attachments/assets/73ca40a6-b590-4a4a-812e-e77c1747bf70" />
 
 
 ## 🔄 Upcoming Improvements
