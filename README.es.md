@@ -105,7 +105,7 @@ Incluye funcionalidades modernas como modo oscuro, selector de idioma, y exporta
 
 <img width="555" height="410" alt="Captura de pantalla 2025-08-08 a las 10 09 21" src="https://github.com/user-attachments/assets/6890e87d-2904-4eab-9d89-832666084b69" />
 
-
+---
 
 ## 🎨 Créditos
 
