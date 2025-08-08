@@ -16,18 +16,18 @@
     "date": "Fecha"
   },
   "personalData": {
-    "firstName": "Ruth",
-    "lastName": "Millán Piqueras",
-    "location": "Valencia, España",
-    "email": "ruth.millan.dev@gmail.com",
-    "linkedin": "https://www.linkedin.com/in/ruth-millan-piqueras",
-    "github": "https://github.com/Ruthmp",
+    "firstName": "Lorem",
+    "lastName": "Ipsum Dolor",
+    "location": "Madrid, España",
+    "email": "lorem.ipsum.dev@gmail.com",
+    "linkedin": "https://www.linkedin.com",
+    "github": "https://github.com/",
     "website": null
   },
-  "tagline": "👩‍💻 Desarrolladora web Junior.",
+  "tagline": "👩‍💻 Desarrolladora web.",
   "profile": 
-    "Me estoy formando como desarrolladora web y cuento con experiencia previa liderando equipos, trabajando en logística y atención al cliente. Me apasiona la tecnología y aprender cosas nuevas cada día. Actualmente estoy enfocada en mejorar mis habilidades en HTML, CSS y JavaScript, con el objetivo de crecer como desarrolladora frontend y aportar valor en proyectos reales. Durante mis prácticas, he trabajado de forma continua con Git y GitHub en un flujo de desarrollo real.",
-    
+"Desarrolladora web con sólida experiencia en la creación de aplicaciones frontend y full stack, colaborando en proyectos de alto impacto para diversos sectores. Especializada en HTML, CSS, JavaScript, React y Node.js, con conocimientos en bases de datos relacionales y no relacionales. Apasionada por la tecnología, la optimización del rendimiento y la mejora continua. Experiencia trabajando con metodologías ágiles y control de versiones mediante Git y GitHub en entornos de desarrollo colaborativos. Comprometida con la entrega de soluciones eficientes, escalables y orientadas a la experiencia del usuario.",
+
   "technicalSkills": {
     "title": "Habilidades Técnicas (Skills)",
     "categories": [
@@ -37,21 +37,31 @@
         "skills": [
           {"name": "HTML5", "iconClass": "devicon-html5-plain colored"},
           {"name": "CSS3", "iconClass": "devicon-css3-plain colored"},
-          {"name": "JavaScript", "iconClass": "devicon-javascript-plain colored"}
+          {"name": "JavaScript", "iconClass": "devicon-javascript-plain colored"},
+          { "name": "TypeScript", "iconClass": "devicon-typescript-plain colored" },
+          { "name": "React.js", "iconClass": "devicon-react-original colored" },
+          { "name": "Vue.js", "iconClass": "devicon-vuejs-plain colored" },
+          { "name": "Sass", "iconClass": "devicon-sass-original colored" },
+          { "name": "Bootstrap", "iconClass": "devicon-bootstrap-plain colored" }
         ]
       },
       {
         "key": "backend",
         "name": "Backend",
         "skills": [
-          {"name": "Go", "iconClass": "devicon-go-plain colored"}
+          {"name": "Go", "iconClass": "devicon-go-plain colored"},
+          { "name": "Node.js", "iconClass": "devicon-nodejs-plain colored" },
+          { "name": "Java", "iconClass": "devicon-java-plain colored" },
+          { "name": "PHP", "iconClass": "devicon-php-plain colored" }
         ]
       },
       {
         "key": "databases",
         "name": "Bases de Datos",
         "skills": [
-          {"name": "MySQL", "iconClass": "devicon-mysql-plain colored"}
+          {"name": "MySQL", "iconClass": "devicon-mysql-plain colored"},
+          { "name": "PostgreSQL", "iconClass": "devicon-postgresql-plain colored" },
+          { "name": "MongoDB", "iconClass": "devicon-mongodb-plain colored" }
         ]
       },
       {
@@ -61,16 +71,27 @@
           {"name": "Git", "iconClass": "devicon-git-plain colored"},
           {"name": "GitHub", "iconClass": "devicon-github-original colored"}
         ]
+      },
+      {
+        "key": "tools",
+        "name": "Herramientas & Entornos",
+        "skills": [
+          { "name": "VS Code", "iconClass": "devicon-vscode-plain colored" },
+          { "name": "Postman", "iconClass": "devicon-postman-plain colored" },
+          { "name": "Figma", "iconClass": "devicon-figma-plain colored" },
+          { "name": "Webpack", "iconClass": "devicon-webpack-plain colored" },
+          { "name": "Docker", "iconClass": "devicon-docker-plain colored" }
+        ]
       }
     ]
   },
   "portfolio": {
-  "title": "Portafolio",
+  "title": "Portfolio",
   "items": [
     {
       "icon": "🌐",
-      "title": "Sitio web de CV dinámico",
-      "description": "Esta es la misma página que estás visitando: un currículum interactivo y responsive desarrollado con HTML, CSS y JavaScript. El proyecto incluye soporte para múltiples idiomas, modo claro y oscuro, y funcionalidad de exportación a PDF utilizando jsPDF.",
+      "title": "Página Web CV Dinámico",
+      "description": "Esta es la misma página que estás visitando: un currículum interactivo y responsive desarrollado con HTML, CSS y JavaScript. El proyecto incluye soporte multilenguaje, modos claro y oscuro, y funcionalidad de exportación a PDF usando jsPDF.",
       "technologies": [
         { "name": "HTML5", "iconClass": "devicon-html5-plain colored" },
         { "name": "CSS3", "iconClass": "devicon-css3-plain colored" },
@@ -78,106 +99,146 @@
         { "name": "jsPDF", "iconClass": "devicon-nodejs-plain colored" }
       ],
       "image": "img/portfolio-cv.png",
-      "demo": "https://tusitio.com",
+      "demo": "https://example.com/cv-dinamico",
       "github": "https://github.com/tuusuario/cv-html-public"
     },
     {
-      "icon": "",
-      "title": "🛠️ Próximamente",
-      "description": "Actualmente trabajando en nuevos proyectos. ¡Estarán disponibles pronto!",
+      "icon": "📱",
+      "title": "App Gestor de Tareas",
+      "description": "Aplicación full-stack para gestión de tareas, desarrollada con React en frontend y Node.js con Express en backend. Incluye autenticación de usuarios, operaciones CRUD para tareas y actualizaciones en tiempo real usando WebSockets.",
       "technologies": [
-        { "name": "", "iconClass": "" }
+        { "name": "React", "iconClass": "devicon-react-original colored" },
+        { "name": "Node.js", "iconClass": "devicon-nodejs-plain colored" },
+        { "name": "Express", "iconClass": "devicon-express-original colored" },
+        { "name": "MongoDB", "iconClass": "devicon-mongodb-plain colored" }
       ],
-      "image": "",
+      "image": "img/portfolio-taskmanager.png",
+      "demo": "https://example.com/gestor-tareas",
+      "github": "https://github.com/tuusuario/app-gestor-tareas"
+    },
+    {
+      "icon": "🛒",
+      "title": "Web de Comercio Electrónico",
+      "description": "Desarrollo de una web de comercio electrónico responsive usando Vue.js para frontend y Go para la API backend. Implementación de catálogo de productos, carrito de compra e integración de pagos seguros.",
+      "technologies": [
+        { "name": "Vue.js", "iconClass": "devicon-vuejs-plain colored" },
+        { "name": "Go", "iconClass": "devicon-go-plain colored" },
+        { "name": "MySQL", "iconClass": "devicon-mysql-plain colored" }
+      ],
+      "image": "img/portfolio-ecommerce.png",
+      "demo": "https://example.com/ecommerce",
+      "github": "https://github.com/tuusuario/ecommerce-go"
+    },
+    {
+      "icon": "🔒",
+      "title": "Servicio API de Autenticación",
+      "description": "Creación de una API REST segura para autenticación y autorización de usuarios usando tokens JWT y OAuth2. Desarrollada con Go e integrada con PostgreSQL.",
+      "technologies": [
+        { "name": "Go", "iconClass": "devicon-go-plain colored" },
+        { "name": "PostgreSQL", "iconClass": "devicon-postgresql-plain colored" },
+        { "name": "Docker", "iconClass": "devicon-docker-plain colored" }
+      ],
+      "image": "img/portfolio-api-auth.png",
       "demo": "",
-      "github": ""
+      "github": "https://github.com/tuusuario/api-auth-service"
     }
   ]
 },
+
   "experience": {
-    "title": "Experiencia Laboral",
-    "items": [
-      {
-        "icon": "💻",
-        "position": "Desarrolladora Web (Prácticas)",
-        "company": "Fundación Medac",
-        "location": "España",
-        "startDate": "2025-03",
-        "endDate": "2025-06",
-        "hours": "370",
-        "technologies": [
-          { "name": "Go", "iconClass": "devicon-go-plain colored" },
-          { "name": "HTML5", "iconClass": "devicon-html5-plain colored" },
-          { "name": "CSS3", "iconClass": "devicon-css3-plain colored" }
-        ],
-        "description": "Desarrollo de una aplicación en Go integrando la API de Google Drive. Funcionalidades implementadas: visualización de archivos y carpetas. Descarga manual o masiva (en ZIP) de archivos y carpetas mediante enlaces. Subida de archivos manual y masiva. Trabajo en equipo siguiendo buenas prácticas de control de versiones (Git) y documentación técnica."
-      },
-      {
-        "icon": "🚛",
-        "position": "Gerente A (Logística)",
-        "company": "Mercadona",
-        "location": "Sagunto, Valencia",
-        "startDate": "2024-11",
-        "endDate": "Actual",
-        "description": "Actualmente, preparación de pedidos para tiendas mediante sistema de picking. Organización y montaje de palés con los productos solicitados. Verificación de cantidades y calidad antes del envío. Uso de transpaleta eléctrica. Cumplimiento de tiempos y estándares de calidad en un entorno logístico dinámico."
-      },
-      {
-        "icon": "👥",
-        "position": "Assistant Manager",
-        "company": "JD Sports",
-        "location": "Sagunto, Valencia",
-        "startDate": "2022-06",
-        "endDate": "2024-11",
-        "description": "Gestión del equipo: planificación de horarios, procesos de contratación, seguimiento del personal y detección de talento. Análisis de cuentas de explotación para garantizar la rentabilidad de la tienda. Coordinación y motivación del equipo para alcanzar los objetivos en los tiempos establecidos. Seguimiento y análisis de KPI’s."
-      },
-      {
-        "icon": "👩‍💼",
-        "position": "Supervisora",
-        "company": "JD Sports",
-        "location": "Castellón, Castellón",
-        "startDate": "2019-09",
-        "endDate": "2022-05",
-        "description": "Responsable de tienda: apertura, cierre y arqueos de caja. Gestión de equipo y atención al cliente. Responsable de la sección de calzado, aplicando técnicas de visual merchandising para potenciar las ventas y asegurar una presentación comercial adecuada. Gestión de incidencias, formación y organización del equipo."
-      },
-      {
-        "icon": "🛍️",
-        "position": "Sales Assistant",
-        "company": "JD Sports",
-        "location": "Castellón, Castellón",
-        "startDate": "2017-11",
-        "endDate": "2019-08",
-        "description": "Atención al cliente durante el proceso de venta. Gestión de producto en el sector retail: alarmado, procesado e implantación tanto en tienda como en almacén. Uso de TPV y realización de venta complementaria."
-      },
-      {
-        "icon": "🍽️",
-        "position": "Auxiliar restauración moderna",
-        "company": "100 Montaditos",
-        "location": "Castellón, Castellón",
-        "startDate": "2013-10",
-        "endDate": "2017-05",
-        "description": "Atención al cliente, preparación de pedidos, servicio en barra y sala. Apoyo en cocina, reposición y control de stock. Limpieza y mantenimiento del área de trabajo. Trabajo en equipo bajo presión, cumpliendo con los estándares de calidad y tiempos del servicio en restauración moderna."
-      }
-    ]
-  },
+  "title": "Experiencia Laboral",
+  "items": [
+    {
+      "icon": "💻",
+      "position": "Desarrolladora Frontend Senior",
+      "company": "TechNova Solutions",
+      "location": "Madrid, España",
+      "startDate": "2023-09",
+      "endDate": "Actual",
+      "technologies": [
+        { "name": "React.js", "iconClass": "devicon-react-original colored" },
+        { "name": "TypeScript", "iconClass": "devicon-typescript-plain colored" },
+        { "name": "Sass", "iconClass": "devicon-sass-original colored" },
+        { "name": "Node.js", "iconClass": "devicon-nodejs-plain colored" },
+        { "name": "Docker", "iconClass": "devicon-docker-plain colored" }
+      ],
+      "description": "Liderazgo técnico en el desarrollo de interfaces de usuario escalables y optimizadas para aplicaciones web de gran tráfico. Implementación de arquitecturas modulares, patrones de diseño y optimización de rendimiento. Colaboración con diseñadores y backend para asegurar una experiencia de usuario fluida. Mentoría a desarrolladores junior y revisión de código."
+    },
+    {
+      "icon": "🌐",
+      "position": "Desarrolladora Full Stack",
+      "company": "Global DevWorks",
+      "location": "Barcelona, España",
+      "startDate": "2021-05",
+      "endDate": "2023-08",
+      "technologies": [
+        { "name": "Vue.js", "iconClass": "devicon-vuejs-plain colored" },
+        { "name": "Express.js", "iconClass": "devicon-express-original colored" },
+        { "name": "MongoDB", "iconClass": "devicon-mongodb-plain colored" },
+        { "name": "PostgreSQL", "iconClass": "devicon-postgresql-plain colored" },
+        { "name": "GitHub", "iconClass": "devicon-github-original colored" }
+      ],
+      "description": "Desarrollo y mantenimiento de aplicaciones web full stack para clientes internacionales. Creación de APIs REST, integración con servicios externos y despliegue en entornos cloud. Implementación de pruebas unitarias y de integración. Participación en sprints ágiles y planificación de producto."
+    },
+    {
+      "icon": "⚙️",
+      "position": "Desarrolladora Backend",
+      "company": "DataLogic Software",
+      "location": "Valencia, España",
+      "startDate": "2019-01",
+      "endDate": "2021-04",
+      "technologies": [
+        { "name": "Go", "iconClass": "devicon-go-plain colored" },
+        { "name": "Java", "iconClass": "devicon-java-plain colored" },
+        { "name": "MySQL", "iconClass": "devicon-mysql-plain colored" },
+        { "name": "Redis", "iconClass": "devicon-redis-plain colored" },
+        { "name": "Docker", "iconClass": "devicon-docker-plain colored" }
+      ],
+      "description": "Desarrollo de microservicios y APIs para sistemas de gestión empresarial. Optimización de consultas SQL y mejora del rendimiento de bases de datos. Automatización de procesos internos y despliegues continuos. Implementación de autenticación y autorización seguras."
+    },
+    {
+      "icon": "💼",
+      "position": "Desarrolladora Web Junior",
+      "company": "Fundación Solaris",
+      "location": "España",
+      "startDate": "2018-03",
+      "endDate": "2018-09",
+      "technologies": [
+        { "name": "HTML5", "iconClass": "devicon-html5-plain colored" },
+        { "name": "CSS3", "iconClass": "devicon-css3-plain colored" },
+        { "name": "JavaScript", "iconClass": "devicon-javascript-plain colored" }
+      ],
+      "description": "Colaboración en el desarrollo de una aplicación web para gestión documental. Creación de vistas responsivas y conexión con API REST. Soporte en pruebas y depuración de errores. Documentación técnica del proyecto."
+    }
+  ]
+},
+
   "education": {
-    "title": "Formación Académica",
-    "items": [
-      {
-        "degree": "Técnico Superior en Desarrollo de Aplicaciones Web",
-        "institution": "MEDAC",
-        "startYear": "2023",
-        "endYear": "2025",
-        "description": "Formación completa en desarrollo frontend y backend."
-      },
-      {
-        "degree": "Grado Universitario en Criminología y Seguridad",
-        "institution": "Universidad Jaime I",
-        "startYear": "2008",
-        "endYear": "2013",
-        "description": "Formación superior en criminología, con enfoque en análisis, prevención y gestión de la seguridad."
-      }
-    ]
-  },
+  "title": "Formación Académica",
+  "items": [
+    {
+      "degree": "Grado en Ingeniería Informática",
+      "institution": "Universidad Politécnica de Madrid",
+      "startYear": "2018",
+      "endYear": "2022",
+      "description": "Especialización en desarrollo de aplicaciones web y arquitectura de software."
+    },
+    {
+      "degree": "Técnico Superior en Desarrollo de Aplicaciones Web",
+      "institution": "Instituto Tecnológico Alborán",
+      "startYear": "2016",
+      "endYear": "2018",
+      "description": "Formación completa en desarrollo frontend y backend."
+    },
+    {
+      "degree": "Certificación Profesional en Desarrollo con React y Node.js",
+      "institution": "Platzi",
+      "startYear": "2021",
+      "endYear": "2021",
+      "description": "Desarrollo de aplicaciones modernas con React, Node.js, Express y MongoDB."
+    }
+  ]
+},
   "languages": {
     "title": "Idiomas",
     "items": [
@@ -187,8 +248,7 @@
       },
       {
         "language": "🇬🇧 Inglés",
-        "level": "A2",
-        "extra": "Mejorando diariamente con práctica informal"
+        "level": "B2"
       }
     ]
   },

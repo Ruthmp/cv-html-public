@@ -153,6 +153,7 @@ function generateTechnicalSkills(doc, data, y) {
   doc.setFontSize(12);
 
   skills.categories.forEach((category) => {
+    y = checkAddPage(doc, y, 7);
     //Title for each category
     doc.setFont("helvetica", "bold");
     doc.text(`• ${category.name}`, 17, y);
@@ -212,6 +213,7 @@ function generateExperience(doc, data, y) {
       y += techLines.length * 6 + 4; // Adjust y position for next item
     }
     //Description
+    y = checkAddPage(doc, y, 7);
     const descriptionLines = doc.splitTextToSize(item.description, 180);
     doc.setFont("helvetica", "normal");
     doc.text(descriptionLines, 17, y);
@@ -346,7 +348,7 @@ async function downloadPDF() {
     y = generateOtherSections(doc, data, y);
 
     const fileName =
-      lang === "en" ? "CV_Ruth_Millán_En.pdf" : "CV_Ruth_Millán_Es.pdf";
+      lang === "en" ? "CV_En.pdf" : "CV_Es.pdf";
     doc.save(fileName);
   } catch (error) {
     console.error("Error generando el PDF:", error);

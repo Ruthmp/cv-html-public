@@ -16,50 +16,70 @@
     "date": "Date"
   },
   "personalData": {
-    "firstName": "Ruth",
-    "lastName": "Millán Piqueras",
-    "location": "Valencia, España",
-    "email": "ruth.millan.dev@gmail.com",
-    "linkedin": "https://www.linkedin.com/in/ruth-millan-piqueras",
-    "github": "https://github.com/Ruthmp",
+    "firstName": "Lorem",
+    "lastName": "Ipsum Dolor",
+    "location": "Madrid, España",
+    "email": "lorem.ipsum.dev@gmail.com",
+    "linkedin": "https://www.linkedin.com",
+    "github": "https://github.com",
     "website": null
   },
-  "tagline": "👩‍💻 Junior Web Developer.",
-  "profile": "I am training to become a web developer and have previous experience leading teams, working in logistics, and customer service. I’m passionate about technology and learning new things every day. I’m currently focused on improving my skills in HTML, CSS, and JavaScript, aiming to grow as a frontend developer and contribute to real-world projects. During my internship, I worked consistently with Git and GitHub in a real development workflow.",
+  "tagline": "👩‍💻 Web Developer.",
+  "profile": "Web developer with strong experience in building frontend and full-stack applications, contributing to high-impact projects across various industries. Specialized in HTML, CSS, JavaScript, React, and Node.js, with knowledge of relational and non-relational databases. Passionate about technology, performance optimization, and continuous learning. Experienced in agile methodologies and version control using Git and GitHub within collaborative development environments. Committed to delivering efficient, scalable, and user-centered solutions.",
   
   "technicalSkills": {
-    "title": "Technical Skills",
+    "title": "Habilidades Técnicas (Skills)",
     "categories": [
       {
         "key": "frontend",
         "name": "Frontend",
         "skills": [
-          { "name": "HTML5", "iconClass": "devicon-html5-plain colored" },
-          { "name": "CSS3", "iconClass": "devicon-css3-plain colored" },
-          {
-            "name": "JavaScript",
-            "iconClass": "devicon-javascript-plain colored"
-          }
+          {"name": "HTML5", "iconClass": "devicon-html5-plain colored"},
+          {"name": "CSS3", "iconClass": "devicon-css3-plain colored"},
+          {"name": "JavaScript", "iconClass": "devicon-javascript-plain colored"},
+          { "name": "TypeScript", "iconClass": "devicon-typescript-plain colored" },
+          { "name": "React.js", "iconClass": "devicon-react-original colored" },
+          { "name": "Vue.js", "iconClass": "devicon-vuejs-plain colored" },
+          { "name": "Sass", "iconClass": "devicon-sass-original colored" },
+          { "name": "Bootstrap", "iconClass": "devicon-bootstrap-plain colored" }
         ]
       },
       {
         "key": "backend",
         "name": "Backend",
-        "skills": [{ "name": "Go", "iconClass": "devicon-go-plain colored" }]
+        "skills": [
+          {"name": "Go", "iconClass": "devicon-go-plain colored"},
+          { "name": "Node.js", "iconClass": "devicon-nodejs-plain colored" },
+          { "name": "Java", "iconClass": "devicon-java-plain colored" },
+          { "name": "PHP", "iconClass": "devicon-php-plain colored" }
+        ]
       },
       {
         "key": "databases",
-        "name": "Databases",
+        "name": "Bases de Datos",
         "skills": [
-          { "name": "MySQL", "iconClass": "devicon-mysql-plain colored" }
+          {"name": "MySQL", "iconClass": "devicon-mysql-plain colored"},
+          { "name": "PostgreSQL", "iconClass": "devicon-postgresql-plain colored" },
+          { "name": "MongoDB", "iconClass": "devicon-mongodb-plain colored" }
         ]
       },
       {
         "key": "versionControl",
-        "name": "Version Control",
+        "name": "Control de Versiones",
         "skills": [
-          { "name": "Git", "iconClass": "devicon-git-plain colored" },
-          { "name": "GitHub", "iconClass": "devicon-github-original colored" }
+          {"name": "Git", "iconClass": "devicon-git-plain colored"},
+          {"name": "GitHub", "iconClass": "devicon-github-original colored"}
+        ]
+      },
+      {
+        "key": "tools",
+        "name": "Herramientas & Entornos",
+        "skills": [
+          { "name": "VS Code", "iconClass": "devicon-vscode-plain colored" },
+          { "name": "Postman", "iconClass": "devicon-postman-plain colored" },
+          { "name": "Figma", "iconClass": "devicon-figma-plain colored" },
+          { "name": "Webpack", "iconClass": "devicon-webpack-plain colored" },
+          { "name": "Docker", "iconClass": "devicon-docker-plain colored" }
         ]
       }
     ]
@@ -78,107 +98,145 @@
         { "name": "jsPDF", "iconClass": "devicon-nodejs-plain colored" }
       ],
       "image": "img/portfolio-cv.png",
-      "demo": "https://tusitio.com",
+      "demo": "https://example.com/dynamic-cv",
       "github": "https://github.com/tuusuario/cv-html-public"
     },
     {
-      "icon": "",
-      "title": "🛠️ Coming Soon",
-      "description": "Currently working on new projects. They will be available soon!",
+      "icon": "📱",
+      "title": "Task Manager App",
+      "description": "A full-stack task management application built with React for the frontend and Node.js with Express for the backend. Features user authentication, task CRUD operations, and real-time updates using WebSockets.",
       "technologies": [
-        { "name": "", "iconClass": "" }
+        { "name": "React", "iconClass": "devicon-react-original colored" },
+        { "name": "Node.js", "iconClass": "devicon-nodejs-plain colored" },
+        { "name": "Express", "iconClass": "devicon-express-original colored" },
+        { "name": "MongoDB", "iconClass": "devicon-mongodb-plain colored" }
       ],
-      "image": "",
+      "image": "img/portfolio-taskmanager.png",
+      "demo": "https://example.com/task-manager",
+      "github": "https://github.com/tuusuario/task-manager-app"
+    },
+    {
+      "icon": "🛒",
+      "title": "E-commerce Website",
+      "description": "Developed a responsive e-commerce website using Vue.js for the frontend and Go for the backend API. Implemented product catalog, shopping cart, and secure payment integration.",
+      "technologies": [
+        { "name": "Vue.js", "iconClass": "devicon-vuejs-plain colored" },
+        { "name": "Go", "iconClass": "devicon-go-plain colored" },
+        { "name": "MySQL", "iconClass": "devicon-mysql-plain colored" }
+      ],
+      "image": "img/portfolio-ecommerce.png",
+      "demo": "https://example.com/ecommerce",
+      "github": "https://github.com/tuusuario/ecommerce-go"
+    },
+    {
+      "icon": "🔒",
+      "title": "API Authentication Service",
+      "description": "Created a secure REST API for user authentication and authorization using JWT tokens and OAuth2. Developed with Go and integrated with PostgreSQL.",
+      "technologies": [
+        { "name": "Go", "iconClass": "devicon-go-plain colored" },
+        { "name": "PostgreSQL", "iconClass": "devicon-postgresql-plain colored" },
+        { "name": "Docker", "iconClass": "devicon-docker-plain colored" }
+      ],
+      "image": "img/portfolio-api-auth.png",
       "demo": "",
-      "github": ""
+      "github": "https://github.com/tuusuario/api-auth-service"
     }
-    
   ]
 },
+
   "experience": {
-    "title": "Work Experience",
-    "items": [
-      {
-        "icon": "💻",
-        "position": "Web Developer (Internship)",
-        "company": "Fundación Medac",
-        "location": "España",
-        "startDate": "2025-03",
-        "endDate": "2025-06",
-        "hours": "370",
-        "technologies": [
-          { "name": "Go", "iconClass": "devicon-go-plain colored" },
-          { "name": "HTML5", "iconClass": "devicon-html5-plain colored" },
-          { "name": "CSS3", "iconClass": "devicon-css3-plain colored" }
-        ],
-        "description": "Development of an application in Go integrating the Google Drive API. Implemented features: file and folder visualization; manual or bulk download (ZIP) of files and folders via links; manual and bulk file upload. Team collaboration following best practices in version control (Git) and technical documentation."
-      },
-      {
-        "icon": "🚛",
-        "position": "Logistics Manager A",
-        "company": "Mercadona",
-        "location": "Sagunto, Valencia",
-        "startDate": "2024-11",
-        "endDate": "Present",
-        "description": "Currently preparing store orders using a picking system. Organizing and assembling pallets with requested products. Verifying quantity and quality before shipping. Use of electric pallet truck. Meeting time and quality standards in a dynamic logistics environment."
-      },
-      {
-        "icon": "👥",
-        "position": "Assistant Manager",
-        "company": "JD Sports",
-        "location": "Sagunto, Valencia",
-        "startDate": "2022-06",
-        "endDate": "2024-11",
-        "description": "Team management: scheduling, hiring processes, staff follow-up, and talent identification. Analysis of profit and loss accounts to ensure store profitability. Team coordination and motivation to meet objectives on time. Monitoring and analysis of KPIs."
-      },
-      {
-        "icon": "👩‍💼",
-        "position": "Supervisor",
-        "company": "JD Sports",
-        "location": "Castellón, Castellón",
-        "startDate": "2019-09",
-        "endDate": "2022-05",
-        "description": "Store responsibility: opening, closing, and cash reconciliation. Team management and customer service. Responsible for the footwear section, applying visual merchandising techniques to boost sales and ensure proper commercial presentation. Incident management, team training, and organization."
-      },
-      {
-        "icon": "🛍️",
-        "position": "Sales Assistant",
-        "company": "JD Sports",
-        "location": "Castellón, Castellón",
-        "startDate": "2017-11",
-        "endDate": "2019-08",
-        "description": "Customer service throughout the sales process. Product handling in the retail sector: tagging, processing, and placement both in-store and in the stockroom. Use of POS system and cross-selling."
-      },
-      {
-        "icon": "🍽️",
-        "position": "Fast Casual Restaurant Crew Member",
-        "company": "100 Montaditos",
-        "location": "Castellón, Castellón",
-        "startDate": "2013-10",
-        "endDate": "2017-05",
-        "description": "Customer service, order preparation, and bar and dining area service. Kitchen support, restocking, and inventory control. Cleaning and maintenance of the workspace. Teamwork under pressure, meeting quality standards and service times in a fast casual restaurant environment."
-      }
-    ]
-  },
+  "title": "Work Experience",
+  "items": [
+    {
+      "icon": "💻",
+      "position": "Senior Frontend Developer",
+      "company": "TechNova Solutions",
+      "location": "Madrid, Spain",
+      "startDate": "2023-09",
+      "endDate": "Present",
+      "technologies": [
+        { "name": "React.js", "iconClass": "devicon-react-original colored" },
+        { "name": "TypeScript", "iconClass": "devicon-typescript-plain colored" },
+        { "name": "Sass", "iconClass": "devicon-sass-original colored" },
+        { "name": "Node.js", "iconClass": "devicon-nodejs-plain colored" },
+        { "name": "Docker", "iconClass": "devicon-docker-plain colored" }
+      ],
+      "description": "Technical leadership in developing scalable and optimized user interfaces for high-traffic web applications. Implemented modular architectures, design patterns, and performance optimization strategies. Collaborated with designers and backend teams to ensure a smooth user experience. Mentored junior developers and performed code reviews."
+    },
+    {
+      "icon": "🌐",
+      "position": "Full Stack Developer",
+      "company": "Global DevWorks",
+      "location": "Barcelona, Spain",
+      "startDate": "2021-05",
+      "endDate": "2023-08",
+      "technologies": [
+        { "name": "Vue.js", "iconClass": "devicon-vuejs-plain colored" },
+        { "name": "Express.js", "iconClass": "devicon-express-original colored" },
+        { "name": "MongoDB", "iconClass": "devicon-mongodb-plain colored" },
+        { "name": "PostgreSQL", "iconClass": "devicon-postgresql-plain colored" },
+        { "name": "GitHub", "iconClass": "devicon-github-original colored" }
+      ],
+      "description": "Developed and maintained full stack web applications for international clients. Built REST APIs, integrated external services, and deployed to cloud environments. Implemented unit and integration testing. Participated in agile sprints and product planning."
+    },
+    {
+      "icon": "⚙️",
+      "position": "Backend Developer",
+      "company": "DataLogic Software",
+      "location": "Valencia, Spain",
+      "startDate": "2019-01",
+      "endDate": "2021-04",
+      "technologies": [
+        { "name": "Go", "iconClass": "devicon-go-plain colored" },
+        { "name": "Java", "iconClass": "devicon-java-plain colored" },
+        { "name": "MySQL", "iconClass": "devicon-mysql-plain colored" },
+        { "name": "Redis", "iconClass": "devicon-redis-plain colored" },
+        { "name": "Docker", "iconClass": "devicon-docker-plain colored" }
+      ],
+      "description": "Developed microservices and APIs for enterprise management systems. Optimized SQL queries and improved database performance. Automated internal processes and implemented continuous deployments. Designed and applied secure authentication and authorization systems."
+    },
+    {
+      "icon": "💼",
+      "position": "Junior Web Developer",
+      "company": "Fundación Solaris",
+      "location": "Spain",
+      "startDate": "2018-03",
+      "endDate": "2018-09",
+      "technologies": [
+        { "name": "HTML5", "iconClass": "devicon-html5-plain colored" },
+        { "name": "CSS3", "iconClass": "devicon-css3-plain colored" },
+        { "name": "JavaScript", "iconClass": "devicon-javascript-plain colored" }
+      ],
+      "description": "Collaborated in the development of a web application for document management. Built responsive views and integrated them with a REST API. Supported testing and bug fixing. Created technical documentation for the project."
+    }
+  ]
+},
   "education": {
-    "title": "Academic Background",
-    "items": [
-      {
-        "degree": "Higher Technician in Web Application Development",
-        "institution": "MEDAC",
-        "startYear": "2023",
-        "endYear": "2025",
-        "description": "Comprehensive training in frontend and backend development."
-      },
-      {
-        "degree": "Degree in Criminology and Security",
-        "institution": "Universidad Jaime I",
-        "startYear": "2008",
-        "endYear": "2013",
-        "description": "Higher education in criminology, focused on analysis, prevention, and security management."
-      }
-    ]
-  },
+  "title": "Education",
+  "items": [
+    {
+      "degree": "Bachelor’s Degree in Computer Engineering",
+      "institution": "Technical University of Madrid",
+      "startYear": "2018",
+      "endYear": "2022",
+      "description": "Specialization in web application development and software architecture."
+    },
+    {
+      "degree": "Higher Technician in Web Application Development",
+      "institution": "Alborán Technological Institute",
+      "startYear": "2016",
+      "endYear": "2018",
+      "description": "Comprehensive training in frontend and backend development."
+    },
+    {
+      "degree": "Professional Certification in React and Node.js Development",
+      "institution": "Platzi",
+      "startYear": "2021",
+      "endYear": "2021",
+      "description": "Development of modern applications using React, Node.js, Express, and MongoDB."
+    }
+  ]
+},
   "languages": {
     "title": "Languages",
     "items": [
@@ -188,8 +246,7 @@
       },
       {
         "language": "🇬🇧 English",
-        "level": "A2",
-        "extra": "Improving daily through informal practice"
+        "level": "B2"
       }
     ]
   },

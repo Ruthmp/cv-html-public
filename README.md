@@ -89,14 +89,12 @@ It includes modern features such as dark mode, language selector, and PDF export
 
 ### 🌚 Dark Mode
 
-<img width="555" height="410" alt="Captura de pantalla 2025-08-06 a las 21 36 49" src="https://github.com/user-attachments/assets/046931bb-9614-4eeb-896b-2b7e362c9de3" />
 
-<img width="555" height="410" alt="Captura de pantalla 2025-08-06 a las 21 37 22" src="https://github.com/user-attachments/assets/aa8a46dd-5c6a-4fc7-8909-5ed129fb755c" />
 
 
 ### 🌞 Light Mode
 
-<img width="555" height="410" alt="Captura de pantalla 2025-08-06 a las 21 37 44" src="https://github.com/user-attachments/assets/dc2dc15c-42e6-4f6a-9593-3e4700ee47df" />
+
 
 ## 🔄 Upcoming Improvements
 
