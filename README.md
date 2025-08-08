@@ -104,11 +104,6 @@ It includes modern features such as dark mode, language selector, and PDF export
 <img width="555" height="410" alt="Captura de pantalla 2025-08-08 a las 10 28 45" src="https://github.com/user-attachments/assets/73ca40a6-b590-4a4a-812e-e77c1747bf70" />
 
 
-## 🔄 Upcoming Improvements
-
-* ✨ Interactive projects section
-
-
 ---
 
 ## 🎨 Credits
