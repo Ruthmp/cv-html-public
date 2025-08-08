@@ -103,13 +103,22 @@ Incluye funcionalidades modernas como modo oscuro, selector de idioma, y exporta
 
 ### 🌚 Modo Oscuro
 
-<img width="1410" height="816" alt="Captura de pantalla 2025-08-08 a las 10 09 21" src="https://github.com/user-attachments/assets/6890e87d-2904-4eab-9d89-832666084b69" />
+<img width="555" height="410" alt="Captura de pantalla 2025-08-08 a las 10 09 21" src="https://github.com/user-attachments/assets/6890e87d-2904-4eab-9d89-832666084b69" />
 
 
 
 ## 🔄 Próximas Mejoras
 
 * ✨ Sección de proyectos interactivos
+
+## 🎨 Créditos
+
+- Ilustraciones por [Lummi](https://lummi.com)  
+- Iconos por [Font Awesome](https://fontawesome.com/), [Devicon](https://devicon.dev/) y [Flag Icons](https://flagicons.lipis.dev/)  
+- Tipografías proporcionadas por [Google Fonts](https://fonts.google.com/)
+
+---
+
   
 
 ## 📅 Última Actualización
