@@ -5,6 +5,10 @@
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat\&logo=javascript\&logoColor=black)
 ![jsPDF](https://img.shields.io/badge/jsPDF-8A4182?style=flat\&logo=jsPDF\&logoColor=white)
 
+### ⚠️ Nota Importante
+
+> Este repositorio contiene datos ficticios y de ejemplo para mostrar la funcionalidad del CV web. No representa información personal real.
+
 
 ### 🌐 Disponible en otros idiomas
 
@@ -90,12 +94,16 @@ Incluye funcionalidades modernas como modo oscuro, selector de idioma, y exporta
 ## 📷 Vista Previa
 
 ### 🌞 Modo Claro
+<img width="1420" height="792" alt="Captura de pantalla 2025-08-08 a las 10 08 03" src="https://github.com/user-attachments/assets/00ae42dd-f485-4305-b877-c242c0f29b67" />
 
+<img width="1419" height="806" alt="Captura de pantalla 2025-08-08 a las 10 08 28" src="https://github.com/user-attachments/assets/6fa100a4-a59d-4ede-8c66-9487408e61d6" />
 
+<img width="1417" height="807" alt="Captura de pantalla 2025-08-08 a las 10 08 55" src="https://github.com/user-attachments/assets/15e99809-5f80-461a-8546-d1b836f338d9" />
 
 
 ### 🌚 Modo Oscuro
 
+<img width="1410" height="816" alt="Captura de pantalla 2025-08-08 a las 10 09 21" src="https://github.com/user-attachments/assets/6890e87d-2904-4eab-9d89-832666084b69" />
 
 
 
@@ -106,7 +114,7 @@ Incluye funcionalidades modernas como modo oscuro, selector de idioma, y exporta
 
 ## 📅 Última Actualización
 
-**06/08/2025**
+**08/08/2025**
 
 
 ## 👤 Autor
