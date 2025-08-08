@@ -124,7 +124,7 @@ Incluye funcionalidades modernas como modo oscuro, selector de idioma, y exporta
 
 ## 👤 Autor
 
-[Ruth Millán](https://github.com/Ruthmp)
+[Ruth Millán](https://github.com/Ruthmp)&nbsp;&nbsp;&nbsp;||&nbsp;&nbsp;&nbsp;  [🔗 LinkedIn](https://www.linkedin.com/in/ruth-millan-piqueras/)
 
 ---
 
