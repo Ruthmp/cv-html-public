@@ -119,7 +119,7 @@ It includes modern features such as dark mode, language selector, and PDF export
 
 ## 👤 Author
 
-[Ruth Millán](https://github.com/Ruthmp)
+[Ruth Millán](https://github.com/Ruthmp)&nbsp;&nbsp;&nbsp;||&nbsp;&nbsp;&nbsp;  [🔗 LinkedIn](https://www.linkedin.com/in/ruth-millan-piqueras/)
 
 ---
 
