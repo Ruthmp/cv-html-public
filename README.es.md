@@ -119,7 +119,7 @@ Incluye funcionalidades modernas como modo oscuro, selector de idioma, y exporta
 
 ## 📅 Última Actualización
 
-**08/08/2025**
+**10/08/2025**
 
 
 ## 👤 Autor
