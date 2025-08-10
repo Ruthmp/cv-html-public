@@ -67,6 +67,16 @@
         flex-basis: 100%;
         max-width: 100%;
       }
+      .foto-perfil {
+        width: 12rem !important;        
+        height: 15rem !important;
+        margin-left: 0 !important;      
+        margin-right: 0 !important;
+        display: block !important;
+        margin-left: auto !important;
+        margin-right: auto !important;  
+        border-radius: 15% !important;
+      }
 }
 
 /* Responsive for medium screens */

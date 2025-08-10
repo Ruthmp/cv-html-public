@@ -131,6 +131,22 @@ function generateContactInfo(doc, data, y) {
       { url: data.personalData.github }
     );
     y += 8;
+
+    // website
+    if (data.personalData.website!= null){
+      doc.setFont(undefined, 'bold');
+      doc.text(data.labels.website, 15, y);
+      const labelWidth4= doc.getTextWidth(data.labels.website + ' ');
+      doc.setFont(undefined, 'normal');
+      doc.text(data.personalData.website, 15 + labelWidth4, y);
+      // Clickable link for website
+      doc.link(
+        10 + labelWidth4,
+        y - 5,
+        doc.getTextWidth(data.personalData.website),
+        6,
+        { url: data.personalData.website }
+      )};
   
     return y;
   }
