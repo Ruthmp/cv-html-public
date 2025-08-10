@@ -115,7 +115,7 @@ It includes modern features such as dark mode, language selector, and PDF export
 ---
 ## 📅 Last Update
 
-**08/06/2025**
+**10/08/2025**
 
 ## 👤 Author
 
