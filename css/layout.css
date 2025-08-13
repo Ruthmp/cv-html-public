@@ -95,10 +95,11 @@ header div {
     font-weight: bold;
     transition: color 0.3s;
 }
-
+@media (hover: hover) and (pointer: fine) {
 #navbar a:hover {
     color: var(--main-color-dark);
     text-decoration: underline;
+}
 }
 
 /* =========================
@@ -216,10 +217,11 @@ footer p {
     transition: transform 0.2s ease, color 0.2s ease;
     will-change: transform, color;
 }
-
+@media (hover: hover) and (pointer: fine) {
 #contact-info .contact-item:hover i {
     transform: scale(1.2);
     color: var(--accent-color);
+}
 }
 
 /* Reset button styles inside contact panel */

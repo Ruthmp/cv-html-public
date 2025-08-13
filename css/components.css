@@ -93,10 +93,11 @@
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     color: var(--main-text-color);
 }
-
+@media (hover: hover) and (pointer: fine) {
 .skill-item:hover {
     transform: translateY(-4px);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
 }
 
 .skill-item i {
@@ -124,10 +125,11 @@
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-
+@media (hover: hover) and (pointer: fine) {
 #education li:hover {
     transform: translateY(-4px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
 }
 
 #extra-sections {
@@ -157,10 +159,11 @@
     scroll-snap-align: start;
     transition: transform 0.3s ease;
 }
-
+@media (hover: hover) and (pointer: fine) {
 #extra-sections section:hover {
     transform: translateY(-0.5rem);
     box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.18);
+}
 }
 
 #extra-sections ul {
@@ -173,12 +176,13 @@
     margin-bottom: 1rem;
     line-height: 1.6;
 }
-
+@media (hover: hover) and (pointer: fine) {
 #extra-sections li:hover {
     color: var(--accent-color);
     background-color: var(--details-bg-color);
     cursor: default;
     transition: background-color 0.3s, color 0.3s;
+}
 }
 
 .flag-icon {
@@ -209,10 +213,11 @@
     font-size: 2rem;
     margin-right: 1rem;
 }
-
+@media (hover: hover) and (pointer: fine) {
 .tech-icons i:hover {
     transform: scale(1.2);
     transition: transform 0.3s ease, color 0.3s ease;
+}
 }
 
 /* Main content inside timeline items */
@@ -280,20 +285,22 @@
     left: 50%;
     text-align: left;
 }
-
+@media (hover: hover) and (pointer: fine) {
 .timeline-item.left:hover {
     border-left: 4px solid var(--main-color);
     background-color: var(--main-color-light);
+}
 }
 
 .timeline-item.left.open {
     border-left: 4px solid var(--main-color);
     background-color: var(--details-bg-color);
 }
-
+@media (hover: hover) and (pointer: fine) {
 .timeline-item.right:hover {
     border-right: 4px solid var(--main-color);
     background-color: var(--main-color-light);
+}
 }
 
 .timeline-item.right.open {
@@ -353,10 +360,11 @@ color: var(--main-text-color)
   .portfolio-item {
     width: auto !important;
   }
-  
+  @media (hover: hover) and (pointer: fine) {
   .portfolio-item:hover {
     transform: translateY(-5px);
   }
+}
   
   .portfolio-item img {
     width: 100%;

@@ -33,13 +33,14 @@
     .timeline::before {
         left: 20px;
     }
-
+    @media (hover: hover) and (pointer: fine) {
     .timeline-item.right:hover,
     .timeline-item.left:hover {
         border-left: none;
         border-right: 4px solid var(--main-color);
         background-color: var(--main-color-light);
     }
+}
 
     .timeline-item.right.open,
     .timeline-item.left.open {
